@@ -1,33 +1,20 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>AngularJS.info</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap -->
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  </head>
-  <body>
+---
+layout: default
+title: Blog
+---
 
-    <!-- Navbar -->
-    <div class="navbar">
-      <div class="navbar-inner">
-        <a class="brand" href="#">AngularJS.info</a>
-        <ul class="nav">
-          <li class="active"><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+{% for post in paginator.posts %}
+<h3>
+  <a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a>
+</h3>
+  
+{{ post.content }}
 
-          <!-- Search box -->
-          <li>
-            <form class="navbar-search pull-right">
-              <input type="text" class="search-query" placeholder="Search">
-            </form>
-          </li>
-
-        </ul>
-      </div>
-    </div>
-
-    <script src="js/bootstrap.min.js"></script>
-  </body>
-</html>
-
+<div class="meta">
+  <div class="published">
+    Published: {{ post.date | date: "%Y-%m-%d" }}
+    &mdash;
+    <a href="{{ site.url }}{{ post.url }}#disqus_thread" title="Comments">Comments</a>
+  </div>
+</div>
+{% endfor %}
