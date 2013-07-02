@@ -6,9 +6,7 @@ title: Blog
 {% for post in paginator.posts %}
 
   <!-- Date -->
-  <div class="published">
-    Published: {{ post.date | date: "%d %B %Y" }}
-  </div>
+  <div class="published">{{ post.date | date: "%d %B %Y" }}</div>
 
   <!-- Title -->
   <h1>
