@@ -17,7 +17,7 @@ title: Learning Resources
 * [Scope Prototypal Inheritance][7]
 * [Full Spectrum Testing With AngularJS and Karma][8]
           
-## Must watch(Videos)
+## Must watch (videos)
 * [Best Practices][9]
 * [Official YouTube Channel][10]
 * [Beginner Howto's][11]
