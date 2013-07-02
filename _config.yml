@@ -1,0 +1,8 @@
+pygments: true
+
+title: "angularjs.info"
+url: "http://angularjs.info"
+description: "AngularJS examples, recipes & tutorials"
+
+paginate_files: index.html
+permalink: /:year/:month/:title
