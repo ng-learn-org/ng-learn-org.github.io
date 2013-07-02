@@ -2,7 +2,7 @@
 layout: post
 title: Learning Resources
 ---
-        
+
 ## Offical Docs
 * [Developer Guide][1]
 * [API Reference][2]
@@ -16,7 +16,7 @@ title: Learning Resources
 * [Frequently Asked Questions][6]
 * [Scope Prototypal Inheritance][7]
 * [Full Spectrum Testing With AngularJS and Karma][8]
-          
+
 ## Must watch (videos)
 * [Best Practices][9]
 * [Official YouTube Channel][10]
