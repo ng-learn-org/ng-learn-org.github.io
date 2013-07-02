@@ -32,7 +32,7 @@ title: Learning Resources
 ## Small App Examples
 * [wReader][17]
 * [FoodMe][18]
-          
+
 ## Misc
 * [Examples][19]
 * [Cheat Sheet][20]
