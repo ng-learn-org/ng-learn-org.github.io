@@ -4,15 +4,17 @@ title: Blog
 ---
 
 {% for post in paginator.posts %}
-<h3>
-  <a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a>
-</h3>
-  
-{{ post.content }}
 
-<div class="meta">
+  <!-- Date -->
   <div class="published">
-    Published: {{ post.date | date: "%Y-%m-%d" }}
+    Published: {{ post.date | date: "%d %B %Y" }}
   </div>
-</div>
+
+  <!-- Title -->
+  <h1>
+    <a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a>
+  </h1>
+  
+  <!-- Content -->
+  {{ post.content }}
 {% endfor %}
