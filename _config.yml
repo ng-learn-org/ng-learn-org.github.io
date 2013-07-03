@@ -5,9 +5,4 @@ description: AngularJS examples, recipes & tutorials
 paginate: 5
 paginate_files: index.html
 permalink: /:year/:month/:title
-kramdown:
- use_coderay: true
- coderay:
-   coderay_css: style
-   coderay_line_numbers: table
-markdown: kramdown
+
