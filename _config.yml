@@ -1,4 +1,4 @@
-pygments: true
+pygments: false
 title: angularjs.info
 url: http://angularjs-info.github.io
 description: AngularJS examples, recipes & tutorials
