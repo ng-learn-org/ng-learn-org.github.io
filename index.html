@@ -6,17 +6,15 @@ title: Blog
 {% for post in paginator.posts %}
 
   <!-- Title -->
-  <h2><a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a></h2>
-
-  <div class="row">
-
-    <!-- Date -->
-    <div class="span4">{{ post.date | date: "%B %d, %Y" }}</div>
-
-    <div class="span8">      
-      <!-- Content -->
-      {{ post.content }}
-    </div>
-
+  <div class="page-header">
+    <h2>
+      <a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a>
+    </h2>
+    <span class="badge">{{ post.date | date: "%B %d, %Y" }}</span>
+    <span class="badge badge-important">0 comments</span>
   </div>
+
+  <!-- Content -->
+  {{ post.content }}
+
 {% endfor %}
