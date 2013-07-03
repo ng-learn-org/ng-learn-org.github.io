@@ -8,19 +8,19 @@ In the following example, we will once again provide the user with a set of opti
 
 <?prettify?>
 ~~~
-  <div>
-    <h3>Order By:</h3>
-    <select data-ng-model='selectedSortOrder3'
-           data-ng-options="option.value as option.name for option in [{'value':'+name','name':'Name: A-Z'},{'value':'-name','name':'Name: Z-A'}, {'value':'+lastName','name':'Last Name: A-Z'}, {'value':'-lastName','name':'Last Name: Z-A'}, {'value':'+age','name':'Age: Young to Experienced'}, {'value':'-age','name':'Age: Experienced to Young'}]" 
-           data-ng-init="selectedSortOrder3='+age'">
-    </select>  
- </div>
- <div>
-   <h3>List of results:</h3>
-   <div ng-repeat="person in results | orderBy:selectedSortOrder3">
-     {{person.name}} {{person.lastName}} - {{person.age}}
-   </div>
- </div>
+<div>
+  <h3>Order By:</h3>
+  <select data-ng-model='selectedSortOrder3'
+    data-ng-options="option.value as option.name for option in [{'value':'+name','name':'Name: A-Z'},{'value':'-name','name':'Name: Z-A'}, {'value':'+lastName','name':'Last Name: A-Z'}, {'value':'-lastName','name':'Last Name: Z-A'}, {'value':'+age','name':'Age: Young to Experienced'}, {'value':'-age','name':'Age: Experienced to Young'}]" 
+    data-ng-init="selectedSortOrder3='+age'">
+  </select>  
+</div>
+<div>
+  <h3>List of results:</h3>
+  <div ng-repeat="person in results | orderBy:selectedSortOrder3">
+    {{person.name}} {{person.lastName}} - {{person.age}}
+  </div>
+</div>
 ~~~
 
 
