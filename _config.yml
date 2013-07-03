@@ -9,5 +9,5 @@ kramdown:
  use_coderay: true
  coderay:
    coderay_css: style
-   coderay_line_numbers:
+   coderay_line_numbers: table
 markdown: kramdown
