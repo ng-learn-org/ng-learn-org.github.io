@@ -3,37 +3,37 @@ layout: post
 title: Learning Resources
 ---
 
-## Offical Docs
+### Offical Docs
 *  [Developer Guide][1]
 *  [API Reference][2]
 *  [Short Tutorial][3]
 
-## Testing related
+### Testing related
 *  [End-to-end Testing Guide][4]
 *  [Unit Testing][5]
 
-## Must Read
+### Must Read
 *  [Frequently Asked Questions][6]
 *  [Scope Prototypal Inheritance][7]
 *  [Full Spectrum Testing With AngularJS and Karma][8]
 
-## Must watch (videos)
+### Must watch (videos)
 *  [Best Practices][9]
 *  [Official YouTube Channel][10]
 *  [Beginner Howto's][11]
 
-## Other Learning Resources
+### Other Learning Resources
 *  [Year of Moo][12]
 *  [Brian Ford's Blog][13]
 *  [Dean Sofer: AngularJS Tips and Tricks][14]
 *  [AngularJS Devs Blog][15]
 *  [Ben Nadel's Blog][16]
 
-## Small App Examples
+### Small App Examples
 *  [wReader][17]
 *  [FoodMe][18]
 
-## Misc
+### Misc
 *  [Examples][19]
 *  [Cheat Sheet][20]
 *  [UI bootstrap directives][21]
