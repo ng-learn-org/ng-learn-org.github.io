@@ -23,6 +23,23 @@ In the following example, we will once again provide the user with a set of opti
  </div>" | xml_escape }}
 </pre>
 
+<pre class="prettyprint lang-html">
+  <div>
+    <h3>Order By:</h3>
+    <select data-ng-model='selectedSortOrder3'
+           data-ng-options="option.value as option.name for option in [{'value':'+name','name':'Name: A-Z'},{'value':'-name','name':'Name: Z-A'}, {'value':'+lastName','name':'Last Name: A-Z'}, {'value':'-lastName','name':'Last Name: Z-A'}, {'value':'+age','name':'Age: Young to Experienced'}, {'value':'-age','name':'Age: Experienced to Young'}]" 
+           data-ng-init="selectedSortOrder3='+age'">
+    </select>  
+ </div>
+ <div>
+   <h3>List of results:</h3>
+   <div ng-repeat="person in results | orderBy:selectedSortOrder3">
+     {{person.name}} {{person.lastName}} - {{person.age}}
+   </div>
+ </div>
+</pre>
+
+
 _Note_: In order to iterate over this array, Angular provides us with a dsl expression we can use in the ng-options. In this case it will be 'option.value as option.name for option in in optionsSet'. There are other available expressions:
 *  label for value in array
 *  select as label for value in array
