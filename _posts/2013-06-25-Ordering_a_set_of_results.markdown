@@ -6,7 +6,7 @@ categories: [sorting]
 
 In the following example, we will once again provide the user with a set of options to order our results set. In this case, our order criteria options are sourced in an array. Depending on your use case, you may find the array fashion more practical than the object style. You should learn both.
 
-{% codeblock %}
+{% codeblock lang:html %}
   <div>
     <h3>Order By:</h3>
     <select data-ng-model='selectedSortOrder3'
