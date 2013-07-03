@@ -7,23 +7,6 @@ categories: [sorting]
 In the following example, we will once again provide the user with a set of options to order our results set. In this case, our order criteria options are sourced in an array. Depending on your use case, you may find the array fashion more practical than the object style. You should learn both.
 
 <pre class="prettyprint lang-html">
-{{"
-  <div>
-    <h3>Order By:</h3>
-    <select data-ng-model='selectedSortOrder3'
-           data-ng-options="option.value as option.name for option in [{'value':'+name','name':'Name: A-Z'},{'value':'-name','name':'Name: Z-A'}, {'value':'+lastName','name':'Last Name: A-Z'}, {'value':'-lastName','name':'Last Name: Z-A'}, {'value':'+age','name':'Age: Young to Experienced'}, {'value':'-age','name':'Age: Experienced to Young'}]" 
-           data-ng-init="selectedSortOrder3='+age'">
-    </select>  
- </div>
- <div>
-   <h3>List of results:</h3>
-   <div ng-repeat="person in results | orderBy:selectedSortOrder3">
-     {{person.name}} {{person.lastName}} - {{person.age}}
-   </div>
- </div>" | xml_escape }}
-</pre>
-
-<pre class="prettyprint lang-html">
   <div>
     <h3>Order By:</h3>
     <select data-ng-model='selectedSortOrder3'
