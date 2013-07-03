@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Learning Resources
+categories: [resources, beginner]
 ---
 
 ### Offical Docs
