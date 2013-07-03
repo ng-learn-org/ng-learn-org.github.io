@@ -1,8 +1,3 @@
-.highlight span {
-    font-family: "Consolas", "Courier New", "Courier", "FreeMono", monospace;
-    font-size:1em;
-}
-
 .highlight .hll { background-color: #333333 }
 .highlight  { 
      background: #111111; 
@@ -11,9 +6,7 @@
      margin-bottom: 1em;
      font: normal normal normal 115%/normal 'Monaco', 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace !important;
      line-height: 1.1em;
-     overflow: auto;
      font-size: 1.0em;
-     border: 1px solid #CCC;
 
      -moz-border-radius:7px;
      -webkit-border-radius:7px;
@@ -54,7 +47,7 @@
 .highlight .nn { color: #f8f8f2 } /* Name.Namespace */
 .highlight .nx { color: #a6e22e } /* Name.Other */
 .highlight .py { color: #f8f8f2 } /* Name.Property */
-.highlight .nt { color: #66d9ef } /* Name.Tag */
+.highlight .nt { color: #1e347b } /* Name.Tag */
 .highlight .nv { color: teal } /* Name.Variable */
 .highlight .ow { color: #f92672 } /* Operator.Word */
 .highlight .w { color: #48484c } /* Text.Whitespace */
