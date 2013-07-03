@@ -8,6 +8,6 @@ permalink: /:year/:month/:title
 kramdown:
  use_coderay: true
  coderay:
-   coderay_css: class
+   coderay_css: style
    coderay_line_numbers:
 markdown: kramdown
