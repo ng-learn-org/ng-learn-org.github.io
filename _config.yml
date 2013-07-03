@@ -5,5 +5,4 @@ description: AngularJS examples, recipes & tutorials
 paginate: 5
 paginate_files: index.html
 permalink: /:year/:month/:title
-markdown: kramdown
 
