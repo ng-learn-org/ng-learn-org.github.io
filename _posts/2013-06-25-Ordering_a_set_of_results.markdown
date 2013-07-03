@@ -24,6 +24,7 @@ In the following example, we will once again provide the user with a set of opti
 ``
 
 _Note_: In order to iterate over this array, Angular provides us with a dsl expression we can use in the ng-options. In this case it will be 'option.value as option.name for option in in optionsSet'. There are other available expressions:
+
 *  label for value in array
 *  select as label for value in array
 *  label group by group for value in array
