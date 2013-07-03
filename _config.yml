@@ -7,4 +7,7 @@ paginate_files: index.html
 permalink: /:year/:month/:title
 kramdown:
  use_coderay: true
+ coderay:
+   coderay_css: class
+   coderay_line_numbers:
 markdown: kramdown
