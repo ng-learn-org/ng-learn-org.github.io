@@ -28,7 +28,6 @@ _Note_: In order to iterate over this array, Angular provides us with a dsl expr
 *  label group by group for value in array
 *  select as label group by group for value in array
 
-Useful links:
-*  [AngularJS Docs: select][1]
+Useful links: [AngularJS Docs: select][1]
 
 [1]: http://docs.angularjs.org/api/ng.directive:select
