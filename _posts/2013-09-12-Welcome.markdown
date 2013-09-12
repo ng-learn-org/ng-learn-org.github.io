@@ -1,0 +1,18 @@
+---
+layout: post
+title: Welcome
+---
+
+Welcome to our site, 
+
+This is a Zero to Ninja site dedicated to learn [AngularJS][1]. One of the common complains about AngularJS is it’s documentation, which to the eyes of the newcomers can be cryptic and hard to digest. In part the problem comes from the fact that AngularJS is still a young technology but also because there are usually multiple ways to things.
+
+Our approach would be slightly different, we will start from very basic concepts, assuming that you already know the basics of Javascript, HTML and CSS. From there and using a combination of our experience, books and other resources we will attempt to help you learn how to build sustainable applications using AngularJS.
+
+Luckily there is plenty of tools out there to make our development experience more pleasant and client side applications are in bloom. In part because of the fact that huge amount processing power at the client side is available. Also because demands from users to have faster and more responsive sites, where server side processing may impose a prohibiting latency.
+
+The down side is that this new world has its own challenges, things like SEO, assest distribution, user tracking and application monitoring. Solutions and new ways of approaching them pop-up everyday but still is not yet at a mature state.
+
+Through a series of regular issues we will dive into each topic and hopefully help you improve your skill sets.
+
+[1]: http://angularjs.org/
