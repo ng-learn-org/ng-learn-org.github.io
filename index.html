@@ -11,9 +11,9 @@ title: Blog
       <a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a>
     </h2>
     <span class="badge">{{ post.date | date: "%B %d, %Y" }}</span>
-    <a href="{{ site.url }}{{ post.url }}#disqus_thread">
-      <span class="badge badge-important">0 comments</span>
-    </a>
+    <span class="badge badge-important">
+      <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
+    </span>
   </div>
 
   <!-- Content -->
