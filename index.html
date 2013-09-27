@@ -5,18 +5,18 @@ title: Blog
 
 {% for post in paginator.posts %}
 
-  <!-- Title -->
+  <!-- Post -->
   <div class="page-header">
-    <span class="glyphicon glyphicon-calendar"></span>{{ post.date | date: "%B %d, %Y" }}
-    <span class="glyphicon glyphicon-comment"></span>
-    <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
-
     <h2>
       <a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a>
     </h2>
-  </div>
+    <span class="glyphicon glyphicon-calendar"></span>{{ post.date | date_to_string }}
+    <span class="glyphicon glyphicon-comment"></span>
+    <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
 
-  <!-- Content -->
-  {{ post.content }}
+
+    {{ post.content }}
+  </div>
+  <!-- /Post -->
 
 {% endfor %}
