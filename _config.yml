@@ -1,6 +1,6 @@
 pygments: false
 title: angularjs.info
-url: http://angularjs-info.github.io
+url: http://ng-learn.org
 description: AngularJS examples, recipes & tutorials
 paginate: 5
 paginate_files: index.html
