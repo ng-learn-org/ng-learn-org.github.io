@@ -8,10 +8,12 @@ title: Blog
   <!-- Title -->
   <div class="page-header">
     <h2>
-      <a href="{{ site.url }}{{ post.url }}#disqus_thread" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a>
+      <a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a>
     </h2>
     <span class="badge">{{ post.date | date: "%B %d, %Y" }}</span>
-    <span class="badge badge-important">0 comments</span>
+    <a href="{{ site.url }}{{ post.url }}#disqus_thread">
+      <span class="badge badge-important">0 comments</span>
+    </a>
   </div>
 
   <!-- Content -->
