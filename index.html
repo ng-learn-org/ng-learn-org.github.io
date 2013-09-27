@@ -7,13 +7,14 @@ title: Blog
 
   <!-- Title -->
   <div class="page-header">
+    <span class="glyphicon glyphicon-calendar">{{ post.date | date: "%B %d, %Y" }}</span>
+    <span class="glyphicon glyphicon-comment">
+      <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
+    </span>
+
     <h2>
       <a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a>
     </h2>
-    <span class="badge">{{ post.date | date: "%B %d, %Y" }}</span>
-    <span class="badge badge-important">
-      <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
-    </span>
   </div>
 
   <!-- Content -->
