@@ -10,12 +10,11 @@ title: Blog
     <h2>
       <a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a>
     </h2>
+    {{ post.content }}
+
     <span class="glyphicon glyphicon-calendar"></span>{{ post.date | date_to_string }}
     <span class="glyphicon glyphicon-comment"></span>
     <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
-
-
-    {{ post.content }}
   </div>
   <!-- /Post -->
 
