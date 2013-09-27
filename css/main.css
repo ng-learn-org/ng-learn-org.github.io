@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Handy George";
+  src: url("fonts/handy_george.woff") format("woff");
+}
+
+.brand {
+    font-family: "Handy George", sans-serif;
+}
+
 body {
     text-shadow: 0 1px 0 rgba(255,255,255,.8);
 }
