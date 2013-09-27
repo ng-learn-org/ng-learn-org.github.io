@@ -48,7 +48,7 @@ textarea{overflow:auto;vertical-align:top;}
 table{border-collapse:collapse;border-spacing:0;}
 *,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
 html{font-size:62.5%;-webkit-tap-highlight-color:rgba(0, 0, 0, 0);}
-body{font-family:'Open Sans',sans-serif;font-size:15px;line-height:1.6;color:#333333;background-color:#eeeeee url(/img/background.gif);}
+body{font-family:'Open Sans',sans-serif;font-size:15px;line-height:1.6;color:#333333;background:#eee url(/img/background.gif);}
 input,button,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit;}
 button,input,select[multiple],textarea{background-image:none;}
 a{color:#428bca;text-decoration:none;}a:hover,a:focus{color:#2a6496;text-decoration:underline;}
