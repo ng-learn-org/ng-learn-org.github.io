@@ -2,7 +2,11 @@ body {
     padding-top: 60px;
     padding-bottom: 40px;
     font-family: "Open Sans", sans-serif;
-    font-size: 14px;
+    font-size: 15px;
+    line-height: 1.6em;
+    background: #EEE url(/img/background.gif);
+    color: #4E4E4E;
+    text-shadow: 0 1px 0 rgba(255,255,255,.8);
 }
 
 .footer {
