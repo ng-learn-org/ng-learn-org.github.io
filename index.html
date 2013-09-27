@@ -12,9 +12,12 @@ title: Blog
     </h2>
     {{ post.content }}
 
-    <span class="glyphicon glyphicon-calendar"></span>{{ post.date | date_to_string }}
-    <span class="glyphicon glyphicon-comment"></span>
-    <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
+    <small>
+      <span class="glyphicon glyphicon-calendar"></span>&nbsp;{{ post.date | date_to_string }}
+      &nbsp;|&nbsp;
+      <span class="glyphicon glyphicon-comment"></span>
+      <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
+    </small>
   </div>
   <!-- /Post -->
 
