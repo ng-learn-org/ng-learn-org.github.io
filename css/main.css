@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Handy George";
-  src: url("fonts/handy_george.woff") format("woff");
+  src: url("/fonts/handy_george.woff") format("woff");
 }
 
 .brand {
