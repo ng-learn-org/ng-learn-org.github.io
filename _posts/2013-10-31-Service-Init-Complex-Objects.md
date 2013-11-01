@@ -112,4 +112,4 @@ angular.module("myApp").service "mySvc", [ ->
 {% endraw %}
 
 
-<iframe src="http://embed.plnkr.co/TFgtMTgI2tdHYUtDgzUl/preview" width="300px" height="300px"> </iframe>
+<iframe src="http://embed.plnkr.co/TFgtMTgI2tdHYUtDgzUl/preview" width="100%" height="950px"> </iframe>
