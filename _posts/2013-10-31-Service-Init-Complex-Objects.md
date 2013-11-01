@@ -1,13 +1,16 @@
 ---
 layout: post
-title: Services - Complex Objects
+title: Services - Initializing Complex Objects
 categories: [resources, beginner]
 ---
 
-## Services - Initializing Complex Objects
+### A very simple use case
 
 Lets say we want to model the object we retrieved from our backend. We want to modify some data, concatenate other and we want to add some functions so we can call them on the fly at presentation layer.
 Lets assume our e-commerce site's backend just retrieved a saved shopping cart (a la amazon). It contains a saved shopping cart holding product with a title, description, quantity, price, taxes, fees, etc.
+
+
+### Step by Step
 
 1- Our Controller will be just a pass through. It will only call our service and make sure that the model we obtain we attach it to our scope so the presentation layer has access to it.
 
