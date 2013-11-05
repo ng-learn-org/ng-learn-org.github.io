@@ -2,7 +2,10 @@
 layout: post
 title: Learning Resources
 categories: [resources, beginner]
+author: Santiago
 ---
+
+This is my personal list of sites, blogs, videos and other learning resources that I've collected since I started learning AngularJS. Hopefully will help you get started faster.
 
 ### Offical Docs
 *  [Developer Guide][1]

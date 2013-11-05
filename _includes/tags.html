@@ -1,0 +1,11 @@
+<section class="side-box">
+  <h3>Tags</h3>
+  <ul class="cloud-tag">
+    {% for category in site.categories %}
+    {% assign tag = category[0] %}
+    <li><i class="fa fa-tag"></i><a href="/tags/{{ tag }}.html">
+        {{ tag | replace:'_',' ' | capitalize }} ({{ site.categories[tag].size }})
+    </a></li>
+    {% endfor %}
+  </ul>
+</section>

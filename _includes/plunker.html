@@ -1,0 +1,19 @@
+{% raw %}
+<button class="btn btn-custom" data-toggle="modal" data-target="#plunker">
+  Launch Demo
+</button>
+
+<div class="modal fade" id="plunker">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title">Live demo</h4>
+      </div>
+      <div class="modal-body">
+        <iframe src="http://embed.plnkr.co/{% endraw %}{{ include.id }}{% raw %}/preview" style="width:100%; height: 640px"> </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+{% endraw %}

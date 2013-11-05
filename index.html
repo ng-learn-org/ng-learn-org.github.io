@@ -5,20 +5,62 @@ title: Blog
 
 {% for post in paginator.posts %}
 
-  <!-- Post -->
-  <div class="page-header">
-    <h2>
-      <a href="{{ site.url }}{{ post.url }}" rel="bookmark permalink" title="Permanent link to this post">{{ post.title }}</a>
-    </h2>
-    {{ post.content }}
+  <!-- article -->
+  <article>
+    <header>
+      <h2>
+        <a href="{{ post.url }}" rel="bookmark permalink">{{ post.title }}</a>
+      </h2>
+      <ul>
+        <li><i class="fa fa-calendar"></i>{{ post.date | date_to_string }}</li>
+        <li><i class="fa fa-user"></i>{{ post.author}}</li>
+        <li><i class="fa fa-tags"></i>
+          {% for category in post.categories %}
+          <a href="/tags/{{ category }}.html">{{ category | replace:'_',' ' | capitalize }}</a>
+          {% if forloop.last == false %},{% endif %}
+          {% endfor %}
+        </li>
+        <li><i class="fa fa-comments"></i><a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a></li>
+      </ul>
+    </header>
 
-    <small>
-      <span class="glyphicon glyphicon-calendar"></span>&nbsp;{{ post.date | date_to_string }}
-      &nbsp;|&nbsp;
-      <span class="glyphicon glyphicon-comment"></span>
-      <a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a>
-    </small>
-  </div>
-  <!-- /Post -->
+    <div class="content">
+      {{ post.excerpt }}
+    </div>
+
+    <footer>
+      <a href="{{ post.url }}" class="btn btn-custom">Read More</a>
+    </footer>
+
+  </article>
+  <!-- /article -->
 
 {% endfor %}
+
+<!-- pagination -->
+<div class="pagination-centered">
+  <ul class="pagination">
+
+    {% if paginator.page == 1 %}
+    <li class="disabled"><span>&laquo;</span></li>
+    {% else  %}
+    <li><a href="{{ paginator.previous_page_path }}">&laquo;</a></li>
+    {% endif %}
+
+    {% for current_page in (1..paginator.total_pages) %}
+      {% if paginator.page == current_page %}
+      <li class="active"><span>{{ current_page }}</span></li>
+      {% else %}
+      <li><a href="{% if current_page != 1 %}/page{{ current_page }}{% endif %}/">{{ current_page }}</a></li>
+      {% endif %}
+    {% endfor %}
+
+    {% if paginator.page == paginator.total_pages %}
+    <li class="disabled"><span>&raquo;</span></li>
+    {% else  %}
+    <li><a href="{{ paginator.next_page_path }}">&raquo;</a></li>
+    {% endif %}
+
+  </ul>
+</div>
+<!-- /pagination -->

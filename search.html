@@ -1,0 +1,32 @@
+---
+layout: default
+title: Search
+---
+
+<div id="search-results"></div>
+<script src="/js/jquery-2.0.3.min.js" type="text/javascript"></script>
+<script src="/js/lunr.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+    var index = lunr(function () {
+        this.field('title', {boost: 10})
+        this.field('body')
+        this.ref('id')
+    });
+
+  var documents = [
+  {% for post in site.posts %}
+      {
+        "id": {{ forloop.index0 }},
+        "title": "{{ post.title }}",
+        "body": "{{ post.content | strip_html | strip_newlines | escape }}",
+        "url": "{{ post.url }}"
+      },
+  {% endfor %}
+  ];
+
+  documents.forEach(function (document) {
+      index.add(document);
+  });
+
+</script>
+<script src="/js/search.js" type="text/javascript"></script>

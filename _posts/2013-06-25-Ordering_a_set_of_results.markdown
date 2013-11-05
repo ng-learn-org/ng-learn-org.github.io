@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Ordering a set of results +/- more option, iterating over an array
+author: Santiago
 categories: [sorting]
 ---
 
 In the following example, we will once again provide the user with a set of options to order our results set. In this case, our order criteria options are sourced in an array. Depending on your use case, you may find the array fashion more practical than the object style. You should learn both.
 
-{% raw %}
-``` html
+{% highlight html %}
 <div>
   <h3>Order By:</h3>
   <select data-ng-model='selectedSortOrder3'
@@ -18,11 +18,10 @@ In the following example, we will once again provide the user with a set of opti
 <div>
   <h3>List of results:</h3>
   <div ng-repeat="person in results | orderBy:selectedSortOrder3">
-    {{person.name}} {{person.lastName}} - {{person.age}}
+    {% raw %}{{ person.name }} {{ person.lastName }} - {{ person.age }} {% endraw %}
   </div>
 </div>
-```
-{% endraw %}
+{% endhighlight %}
 
 _Note_: In order to iterate over this array, Angular provides us with a dsl expression we can use in the ng-options. In this case it will be 'option.value as option.name for option in in optionsSet'. There are other available expressions:
 

@@ -1,21 +1,17 @@
 ---
 layout: post
 title: Services - Initializing Complex Objects
+author: Santiago
 categories: [resources, beginner]
 ---
 
-### A very simple use case
-
-Lets say we want to model the object we retrieved from our backend. We want to modify some data, concatenate other and we want to add some functions so we can call them on the fly at presentation layer.
-Lets assume our e-commerce site's backend just retrieved a saved shopping cart (a la amazon). It contains a saved shopping cart holding product with a title, description, quantity, price, taxes, fees, etc.
-
+Lets say we want to model the object we retrieved from our backend. We want to modify some data, concatenate other and we want to add some functions so we can call them on the fly at presentation layer. Lets assume our e-commerce site's backend just retrieved a saved shopping cart (a la amazon). It contains a saved shopping cart holding product with a title, description, quantity, price, taxes, fees, etc.
 
 ### Step by Step
 
 1- Our Controller will be just a pass through. It will only call our service and make sure that the model we obtain we attach it to our scope so the presentation layer has access to it.
 
-{% raw %}
-``` coffeescript
+{% highlight coffeescript %}
 angular.module("myApp").controller "myCtrl", [ "$scope", "mySvc", ($scope, mySvc) ->
 
   $scope.ui = {}
@@ -24,16 +20,14 @@ angular.module("myApp").controller "myCtrl", [ "$scope", "mySvc", ($scope, mySvc
   $scope.ui.idealModel = mySvc.retrieveMyModel(1)
 
   ]
-```
-{% endraw %}
+{% endhighlight %}
 
 Notes: For debugging purposes we made an additional call to our svc so we can compare the unmodified model we got from our backend towards the one we constructed for our ui.
 
 2- Our Service offers a small set of public methods - our API. Public function 'retrieveMyModel' calls by reference 'fetchModelFromBackendAndConstructIdealObject'.
 A little bit hairy method name but it makes a point about what its responsibility is. We are faking the call to a backend service and we always return the same fakeModel. No massaging so far.
 
-{% raw %}
-``` coffeescript
+{% highlight coffeescript %}
 angular.module("myApp").service "mySvc", [ ->
 
   fakeModel =
@@ -52,14 +46,12 @@ angular.module("myApp").service "mySvc", [ ->
   retrieveMyModel: fetchModelFromBackendAndConstructIdealObject
 
   ]
-```
-{% endraw %}
+{% endhighlight %}
 
 3- Now we add a class with a constructor. This complex object 'UiExpectedModel' will serve as a blueprint to create a more suitable object with only the necessary data for the ui.
 It will also contain some convenience methods that fall under the same domain and that will turn our Model smarter.
 
-{% raw %}
-``` coffeescript
+{% highlight coffeescript %}
 angular.module("myApp").service "mySvc", [ ->
 
   class UiExpectedModel
@@ -111,8 +103,6 @@ angular.module("myApp").service "mySvc", [ ->
   retrieveMyModel: fetchModelFromBackendAndConstructIdealObject
 
   ]
-```
-{% endraw %}
+{% endhighlight %}
 
-
-<iframe src="http://embed.plnkr.co/TFgtMTgI2tdHYUtDgzUl/preview" width="100%" height="950px"> </iframe>
+{% include plunker.html id="TFgtMTgI2tdHYUtDgzUl" %}

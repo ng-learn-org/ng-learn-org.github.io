@@ -1,3 +1,18 @@
+/* General */
+body, html {
+    height: 100%;
+}
+
+body {
+    color: #686868;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Open Sans', san-serif;
+}
+
+/* /General */
+
 @font-face {
   font-family: "Handy George";
   src: url("/fonts/handy_george.woff") format("woff");
@@ -5,18 +20,242 @@
 
 .brand {
     font-family: "Handy George", sans-serif;
-    font-size: 5em;
+    font-size: 3em;
+    letter-spacing: -0.1em;
     font-color: #222;
 }
 
-body {
-    text-shadow: 0 1px 0 rgba(255,255,255,.8);
+#navbar a {
+    text-transform: uppercase;
+    font-size: 1.05em;
+    font-weight: 400;
+    padding: 1.1em 1.5em;
+}
+
+header .navbar {
+
+}
+
+header .navbar-default {
+    border-bottom: 3px solid #e7e7e7;}
+
+
+#search-box {
+    width: 20em;
+    padding: 5px 10px;
+}
+
+/* Article */
+article header ul {
+    padding-left: 0px;
+}
+
+article header ul li {
+    display: inline;
+    list-style: none;
+    padding-right: 1.5em;
+}
+
+article header ul li i {
+    padding-right: 0.5em;
+}
+
+article footer {
+    padding-top: 1.5em;
+}
+
+/* /Article */
+
+/* Button */
+.btn-custom {
+    color: #fff;
+    background: #1abc9c;
+    border-radius: 0px;
+}
+
+.btn-custom:hover {
+    color: #fff;
+    background: #16a085;
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+}
+/* /Button */
+
+/* Posts */
+.posts article {
+    margin-bottom: 3em;
+    padding: 0 1.5em 1.5em 1.5em;
+    border-left-width: 3px;
+    border-left-style: solid;
+}
+
+.posts article:nth-child(odd) {
+    border-left-color: #5fb611;
+}
+
+.posts article:nth-child(even) {
+    border-left-color: #d35400;
+}
+
+/* side box */
+.side-box {
+    overflow: hidden;
+    position: relative;
+}
+
+.side-box h3 {
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.2em;
+    display: inline-block;
+}
+
+.side-box h3:after {
+    width: 100%;
+    content: "";
+    border-bottom: 1px solid #e4e9f0;
+    position: absolute;
+    padding-top: 1.3em;
+}
+/* /side box */
+
+.cloud-tag {
+    padding-left: 0px;
+    list-style: none;
+}
+
+.cloud-tag li {
+    display: inline;
+    margin-right: 1em;
+}
+
+/* footer */
+.footer-top {
+    background: #585f69;
+}
+
+.footer-bottom {
+    background: #3e4753;
+    padding: 1em 0;
 }
 
 .footer {
-    /* text-align: center; */
-    /* padding: 30px 0; */
-    /* margin-top: 70px; */
-    /* border-top: 1px solid #e5e5e5; */
-    /* background-color: #f5f5f5; */
+    color: #dadada;
+}
+
+.footer section {
+    overflow: hidden;
+    position: relative;
+}
+
+.footer section h3 {
+    border-bottom: 3px solid #3498db;
+    padding-bottom: 0.2em;
+    display: inline-block;
+    margin-bottom: 1em;
+}
+
+.footer h3:after {
+    content: "";
+    width: 100%;
+    border-bottom: 1px dotted #e4e9f0;
+    position: absolute;
+    padding-top: 1.35em;
+}
+
+/* /footer */
+
+/* social */
+.social a {
+    font-size: 1.5em;
+    color: #585f69;
+    background: #dadada;
+    width: 2em;
+    height: 2em;
+    display: inline-block;
+    text-align: center;
+    padding-top: 0.25em;
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+
+}
+
+.social {
+    padding-left: 0;
+}
+
+.social li {
+    display: inline;
+}
+
+.social a.twitter:hover {
+    background-color: #3bc1ed;
+}
+
+.social a.rss:hover {
+    background-color: #fe9900;
+}
+
+.social a.github:hover {
+    background-color: #222;
+}
+
+.social a.google-plus:hover {
+    background-color: #cb3f22;
+}
+
+/* /social */
+
+/* header */
+.navbar-custom {
+    color: #dadada;
+    background-color: #3e4753;
+    border-radius: 0;
+}
+
+.navbar-custom a {
+   text-decoration: none;
+}
+
+.navbar-custom li.active {
+    border-bottom: 3px solid #72c02c;
+}
+
+.navbar-custom a {
+    color: #dadada;
+}
+
+.navbar-custom li a:focus {
+    background: rgba(0,0,0,0);
+}
+
+.navbar-custom li.active a {
+    color: #fff;
+}
+
+.navbar-custom li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(0,0,0,0);
+}
+
+.navbar-custom .open a, .navbar-custom .open a:focus {
+    background-color: #585f69;
+}
+
+.navbar-custom .open a:hover {
+    background-color: #585f69;
+    color: #fff;
+}
+
+
+/* /header */
+
+.modal-dialog {
+    width: 80%;
 }

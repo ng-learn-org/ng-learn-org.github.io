@@ -1,5 +1,39 @@
 <header>
-  <div class="container">
-    <h1 class="brand">ng-learn.org</h1>
-  </div>
+  <nav class="navbar navbar-custom" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand brand" href="/">ng-learn.org</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="/">Home</a></li>
+          <li class="sm-hidden xs-hidden dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
+              <!-- search box -->
+              <div id="search-box" class="dropdown-menu">
+                <form action="/search.html" method="GET">
+                  <div class="input-group">
+                    <input type="text" name="query" class="input-large form-control" placeholder="Search">
+                    <span class="input-group-btn">
+                      <button class="btn" type="submit">Go</button>
+                    </span>
+                  </div>
+                </form>
+              </div>
+              <!-- /search box -->
+              
+          </li>
+        </ul>
+     
+
+      </div>
+
+    </div>
+  </nav>
 </header>
