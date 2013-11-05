@@ -18,7 +18,7 @@ title: Search
       {
         "id": {{ forloop.index0 }},
         "title": "{{ post.title }}",
-        "body": "{{ post.content | strip_html | strip_newlines | escape }}",
+        "body": "{{ post.content | replace:'"', '"' | strip_newlines }}",
         "url": "{{ post.url }}"
       },
   {% endfor %}
