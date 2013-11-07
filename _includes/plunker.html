@@ -1,9 +1,9 @@
 {% raw %}
-<button class="btn btn-custom" data-toggle="modal" data-target="#plunker">
+<button class="btn btn-custom" data-toggle="modal" data-target="#plunker{% endraw %}{{ include.id }}{% raw %}">
   Launch Demo
 </button>
 
-<div class="modal fade" id="plunker">
+<div class="modal fade" id="plunker{% endraw %}{{ include.id }}{% raw %}">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
