@@ -19,7 +19,7 @@
           <section>
             <h3>Recent Posts</h3>
             {% for post in site.posts limit: 3 %}
-            <p><a href="#">{{ post.title }}</a></p>
+            <p><a href="{{ post.url }}">{{ post.title }}</a></p>
             {% endfor %}
           </section>
 
