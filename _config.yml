@@ -3,6 +3,6 @@ url: http://ng-learn.org
 description: AngularJS examples, recipes & tutorials
 paginate: 5
 paginate_files: index.html
-permalink: /:year/:month/:title
+permalink: /:year/:month/:title/
 pygments: true
 email: info@ng-learn.org
