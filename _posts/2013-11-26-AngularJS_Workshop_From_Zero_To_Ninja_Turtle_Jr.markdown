@@ -182,7 +182,7 @@ In this couple of steps we install all dependencies and our complete tool chain.
 
   Patience you must have my young padawan.
   We want to give you time to tune in, provide feedback and point out all our mistakes.
-  We will be post the second part in 48 hours.
+  We will post the second part in 48 hours.
 
 
 
