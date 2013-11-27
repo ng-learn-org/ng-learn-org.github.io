@@ -24,7 +24,7 @@ Today we publish our first part of our AngularJs Workshop - From Zero to Ninja T
 
 The code at github has been written in CoffeeScript but you could easily switch any part into JS using [http://js2coffee.org/][4]
 
-### What concepts and practices will be covered in the first ?
+### What concepts and practices will be covered in the first workshop?
 
 - Creation and Setup of my AngularJS application
 - Module creation and definition
