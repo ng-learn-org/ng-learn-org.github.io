@@ -6,7 +6,7 @@ categories: [beginner , workshop]
 ---
 
 Welcome again my young padawan. This is the second part of our AngularJS + CoffeeScript + TDD Workshop.
-Was the first part too easy? Lets see how you do this time....Are you ready Shinobi?
+Was the first part too easy? Lets see how you do this time... Are you ready Shinobi?
 
 ### Scenes from our last chapter
 In our [first chapter][1], we setup our Angular application and define our first module.
@@ -15,6 +15,7 @@ In our [first chapter][1], we setup our Angular application and define our first
 
 - Controller definition
 - Scope
+- Data Binding
 
 ### If you just join us...
 You may choose to follow [Part 1][1] to setup the application yourself.
@@ -132,7 +133,7 @@ Before doing anything new, lets bring everybody to the same page. Please run the
 
 ### Whats Next?
 
- In 48 hours we will public the part 3 on this workshop. We will start our TDD process together. We will receive our first requirement for our application.
+ In 48 hours we will publish the part 3 on this workshop. We will start our TDD process together. We will receive our first requirement for our application.
  We will start our development flow writing a unit test using Jasmine as our framework and Karma as our test executor.
 
  We will learn how to unit test a controller and once we get a nice failing test we will implement the logic to make that test go green again.
