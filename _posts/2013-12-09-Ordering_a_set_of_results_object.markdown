@@ -5,7 +5,11 @@ author: Santiago
 categories: [sorting]
 ---
 
-In the following example, we take advantage of more angular magic. To each string representing the search criteria we will add a '+' or a '-' to indicate the reverse or not direction of our set order. 
+After a brief vacation, we come back with more. Here is a new tip while we polish the next part of our workshop.
+We have previously shown [how to order a set of results iterating over an array][2]. This time we do it over an Object.
+
+
+In the following example, we take advantage of more angular magic. To each string representing the search criteria we will add a '+' or a '-' to indicate the reverse or not direction of our set order.
 As we get more advanced on our order criteria, we moved from a simple string to an object holding the key value map. 
 Example: {'+name': 'Name: A-Z','-name': 'Name: Z-A'} 
 
@@ -38,3 +42,4 @@ For more information go to the [AngularJS "select" documentation][1]
 {% include plunker.html id="djei1a" %}
 
 [1]: http://docs.angularjs.org/api/ng.directive:select
+[2]: http://ng-learn.org/2013/06/Ordering_a_set_of_results/
