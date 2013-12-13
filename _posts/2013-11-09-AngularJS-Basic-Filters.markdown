@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AngularJS - Basic Filters
-author: Santiago
+author: Santiago Esteva
 categories: [filtering, beginner]
 ---
 

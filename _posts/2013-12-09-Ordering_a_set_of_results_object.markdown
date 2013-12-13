@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ordering a set of results +/- more option, iterating over an object
-author: Santiago
+author: Santiago Esteva
 categories: [sorting]
 ---
 

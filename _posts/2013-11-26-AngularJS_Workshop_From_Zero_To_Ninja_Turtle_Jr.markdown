@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AngularJS - Workshop - From Zero to Ninja Turtle Jr - Part 1
-author: Santiago
+author: Santiago Esteva
 categories: [beginner , workshop]
 ---
 

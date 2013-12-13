@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AngularJS - Checkbox with default value
-author: Santiago
+author: Santiago Esteva
 categories: [beginner]
 ---
 

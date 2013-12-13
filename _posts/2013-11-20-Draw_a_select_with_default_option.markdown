@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AngularJS - Draw a Select with default option
-author: Santiago
+author: Santiago Esteva
 categories: [beginner]
 ---
 

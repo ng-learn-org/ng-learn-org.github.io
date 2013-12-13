@@ -1,7 +1,7 @@
 ---
 layout: post
 title: AngularJS - Services - Initializing Complex Objects
-author: Santiago
+author: Santiago Esteva
 categories: [resources, beginner]
 ---
 

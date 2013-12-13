@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Running Grunt Tasks from WebStorm/IntelliJ on Ubuntu
-author: Santiago
+author: Santiago Esteva
 categories: [tools, tips]
 ---
 
