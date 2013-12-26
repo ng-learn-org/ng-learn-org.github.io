@@ -5,8 +5,6 @@ author: Santiago Esteva
 categories: [resources, beginner]
 ---
 
-
-
 Lets say we want to model the object we retrieved from our backend. We want to modify some data, concatenate other and we want to add some functions so we can call them on the fly at presentation layer. Lets assume our e-commerce site's backend just retrieved a saved shopping cart (a la amazon). It contains a saved shopping cart holding product with a title, description, quantity, price, taxes, fees, etc.
 
 ### Step by Step
