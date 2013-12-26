@@ -116,10 +116,12 @@ angular.module("myApp").service("mySvc", [ function() {
 
 {% endhighlight %}
 
-CoffeeScript Working App and Code: {% include plunker.html id="TFgtMTgI2tdHYUtDgzUl" %}
+CoffeeScript Working App and Code:
+{% include plunker.html id="TFgtMTgI2tdHYUtDgzUl" %}
 
 <hr>
 
-Javascript Working App and Code: {% include plunker.html id="cTy2SAC0tupocveiFhtG" %}
+Javascript Working App and Code:
+{% include plunker.html id="cTy2SAC0tupocveiFhtG" %}
 
 
