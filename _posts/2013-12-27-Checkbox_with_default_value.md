@@ -18,7 +18,7 @@ In the following example, we set the values for our checkbox using ng-checked. T
 
 _Note_: ng-checked expects an expression and it does not work with ng-model in the same element.
 
-For more information go to the [AngularJS "ngChecked" documentation][1] 
+For more information go to the [AngularJS documentation][1]
 
 {% include plunker.html id="6mEwqX" %}
 
