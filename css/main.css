@@ -272,3 +272,11 @@ div.pocket-btn {
 }
 /* /Pocket */
 
+table {
+    width: 100%;
+}
+
+td, th {
+    text-align: center;
+    border: 1px solid
+}
