@@ -11,12 +11,13 @@ In the following example, we set the values for our checkbox using ng-checked. T
 <div ng-init="options={};options.one.selected=true">
     <input id="option_1" type="checkbox" 
         ng-click="options.one.selected=!options.one.selected"
-        ng-checked="options.one.selected"/>
+        ng-checked="options.one.selected"
+        ng-model="options.one.selected"/>
     <label for="option_1" >Option 1</label>
 </div>
 {% endhighlight %}
 
-_Note_: ng-checked expects an expression and it does not work with ng-model in the same element.
+_Note_: ng-checked expects an expression.
 
 For more information go to the [AngularJS documentation][1]
 
