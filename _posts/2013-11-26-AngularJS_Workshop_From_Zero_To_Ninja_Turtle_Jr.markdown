@@ -18,7 +18,8 @@ At work we have a really large AngularJS project. Here is a little bit of histor
 
 So, we created a small workshop for them to follow on their own while traversing through different activities and lessons.
 We wanted to focus their attention on AngularJS and TDD practices. We did not want them to pay attention to Yeoman or Grunt.
-But having paid the price of switching from Javascript to CoffeeScript we decided to raise the bet "the only way to get better at something is through repition", right? So we decided to write the workshop in Coffee.
+But having paid the price of switching from Javascript to CoffeeScript we decided to raise the bet \"the only way to get better at something is through repition\", right?
+So we decided to write the workshop in Coffee.
 
 Today we publish our first part of our AngularJs Workshop - From Zero to Ninja Turtle Jr.
 
@@ -59,11 +60,11 @@ Tools getting started links:
 
 ### Javascript or CoffeeScript?
 
-In case you haven't read our intro let me tell our project switched from JS to CS and it was not that painful.
+In case you haven\'t read our intro let me tell our project switched from JS to CS and it was not that painful.
 During this adaption, we were constantly visiting [http://js2coffee.org/][4] writing some code in JS and observing the CS output.
 This was true for a couple of weeks. When we finally got it, it rapidly became a very comfortable place.
 Maybe in the future we will redo the workshop again in JS. Right now, after our experience, it feels a better place to be.
-And that's exactly why we encourage you to follow along. Switch now!
+And that\'s exactly why we encourage you to follow along. Switch now!
 
 ### What is not covered in this workshop?
 
@@ -130,7 +131,7 @@ In this couple of steps we install all dependencies and our complete tool chain.
 
   By running this command, we have just created a small nodejs http server that will serve our application. But Grunt is not part of our scope today. Play along and lets go back to AngularJS.
 
-  **Notes:** The application should say "Welcome to the AngularJS World," but the "{{userName}}" portion should not be visible. Angular has kicked in and it does not display it because that variable is not binded to anything, yet!
+  **Notes:** The application should say \"Welcome to the AngularJS World,\" but the \"{{userName}}\" portion should not be visible. Angular has kicked in and it does not display it because that variable is not binded to anything, yet!
 
 ### Step 1 - Defining our first module
 
@@ -148,7 +149,7 @@ In this couple of steps we install all dependencies and our complete tool chain.
     angular.module("myStoreApp", [])
     {% endhighlight %}
 
-  **Notes:** Here we define a module named 'myStoreApp'. The second parameter it is an array of dependencies required for this module.
+  **Notes:** Here we define a module named \'myStoreApp\'. The second parameter it is an array of dependencies required for this module.
 
 - Add app.js to our index.html so the browser will load it
 
@@ -163,7 +164,7 @@ In this couple of steps we install all dependencies and our complete tool chain.
     </body>
     {% endhighlight %}
 
-  **Notes:** we add our js file wrapped in a 'build comment' so our toolchain converts it from coffee script to javascript.
+  **Notes:** we add our js file wrapped in a \'build comment\' so our toolchain converts it from coffee script to javascript.
 
 - To prove our point, we will add a Run block to our module. Run blocks are the closest thing in Angular to the main method in Java.
   It will be executed after all the dependencies have been injected. Open app.coffee and make the following modification
@@ -174,8 +175,8 @@ In this couple of steps we install all dependencies and our complete tool chain.
         console.log 'Its alive!'
     {% endhighlight %}
 
-  Lets run 'grunt server' in the terminal. This will open a browser with out application. Lets open the developer tools and on the console you should find "Its alive!".
-  Congratulations. You've created your first Angular module.
+  Lets run \'grunt server\' in the terminal. This will open a browser with out application. Lets open the developer tools and on the console you should find \"Its alive!\".
+  Congratulations. You\'ve created your first Angular module.
 
 
 ### Is that it?

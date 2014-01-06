@@ -82,7 +82,7 @@ The performance increased right away and our results were successfully displayed
     <body id="ng-app" data-ng-app="siteApp">
     {% endhighlight %}
 
-3- Do not use custom tags. Use attributes instead always prefixed with 'data' or 'x'
+3- Do not use custom tags. Use attributes instead always prefixed with \'data\' or \'x\'
 
     {% highlight html %}
     <div ng-view>

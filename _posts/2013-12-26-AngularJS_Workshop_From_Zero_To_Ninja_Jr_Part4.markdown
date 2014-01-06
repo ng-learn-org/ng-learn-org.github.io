@@ -11,7 +11,7 @@ Have you been a good developer this year?
 ### Scenes from our last chapters
 In our [first chapter][1], we setup our Angular application and define our first module.
 
-In our [second chapter][2], we defined our first controller and we looked at some angular's magic: scope and bidirectional data binding.
+In our [second chapter][2], we defined our first controller and we looked at some angular\'s magic: scope and bidirectional data binding.
 
 In our [third chapter][3], we wrote our first unit test following our Test Driven Development methodology
 
@@ -35,7 +35,7 @@ All past and future lessons are co-related but independent from each other.
 In our [Part 1][1] we lay out reasons why CoffeeScript and not Javascript was selected for this mission.
 
 ### Setup
-Follow these steps if you haven't played Part 1. Take a look at the requirements explained in [Part 1][1].
+Follow these steps if you haven\'t played Part 1. Take a look at the requirements explained in [Part 1][1].
 
 In these couple of steps we install all dependencies and our complete tool chain.
 
@@ -65,7 +65,7 @@ Before doing anything new, lets bring everybody to the same page. Please run the
 
     git checkout -f step-4
 
-If you get "Karma is not a task" or "Karma is not found". Please execute
+If you get \"Karma is not a task\" or \"Karma is not found\". Please execute
 
     npm install grunt-karma --save-dev
     npm install karma-ng-scenario --save-dev
@@ -77,18 +77,18 @@ If you get "Karma is not a task" or "Karma is not found". Please execute
 
 2. As a User, when I fill in the login form, then I should be redirected to my welcome page.
 
-3. As a User, when I get to my welcome page, then I should see the phrase "Welcome to the AngularJS World, {{fullName}}".
+3. As a User, when I get to my welcome page, then I should see the phrase \"Welcome to the AngularJS World, {{fullName}}\".
 
 **Assumptions:**
 
 1. All login attempts are successful.
 
-2. When the user fills the form, our application needs to pass the username and password to our Profile Service. Our Profile Service returns a Profile containing user's Full Name.
+2. When the user fills the form, our application needs to pass the username and password to our Profile Service. Our Profile Service returns a Profile containing user\'s Full Name.
 
 ### AC 1
 AC 1 seems to require a change on the flow. We need to add another test to our test nest. For this change, a unit test will not do. Instead, we will do an E2E test. E2E should be considered the Angular keyword to describe Component or UI testing.
 
- - **Development Flow - E2E Test:** In this case, we can create an E2E test to validate the first page we hit is the login page. Create a new folder under test. Lets call it e2e. Then create a new file called "loginScenario.coffee".
+ - **Development Flow - E2E Test:** In this case, we can create an E2E test to validate the first page we hit is the login page. Create a new folder under test. Lets call it e2e. Then create a new file called \"loginScenario.coffee\".
 
  {% highlight coffeescript %}
  describe "Login Flow", ->
@@ -100,9 +100,9 @@ AC 1 seems to require a change on the flow. We need to add another test to our t
          expect(element("h1").text()).toBe "Login"
  {% endhighlight %}
 
- If we run 'grunt test' then all unit and e2e test will be executed. We now have a failing test.
+ If we run \'grunt test\' then all unit and e2e test will be executed. We now have a failing test.
 
- - **Development Flow - Coding:**  Adding an H1 tag in our index.html would be enough to make this test go green. Since we are alraedy there, lets add a small form requesting a username and password.
+ - **Development Flow - Coding:**  Adding an H1 tag in our index.html would be enough to make this test go green. Since we are already there, lets add a small form requesting a username and password.
 
  {% highlight html %}
  <div>
@@ -121,8 +121,8 @@ AC 1 seems to require a change on the flow. We need to add another test to our t
 
  Lets run the app and see what we got. As you can see we now have the Login section and the welcome phrase all together on the same page. This is not the flow requested. Lets fix that. We are going to create two different views: one for the login page and one for the welcome page.
 
- - Create a new file under app/views and call it 'login.html' and cut/paste the div containing the Login H1 and form.
- - Create a new file under app/views and call it 'welcome.html' and cut/paste the div containing the welcome phrase.
+ - Create a new file under app/views and call it \'login.html\' and cut/paste the div containing the Login H1 and form.
+ - Create a new file under app/views and call it \'welcome.html\' and cut/paste the div containing the welcome phrase.
 
  If we run the app right now, nothing will be displayed since we have removed all the content from that index.html. Now we need to attach the views to our app flow. How do we do that?
 
@@ -134,7 +134,7 @@ AC 1 seems to require a change on the flow. We need to add another test to our t
 
 **Notes:** The ng-view directive is the one Angular will find and insert/remove/swap the views.
 
- - **Step 2:** Now we need to tell Angular what view to include based on the url we are at. so if we are in '/' we want to display the login page. if we are at '/welcome' we want to display the welcome page. In order to that we will Routes to our main module 'myStoreApp'. Lets go to app.coffee and make the following modifications:
+ - **Step 2:** Now we need to tell Angular what view to include based on the url we are at. so if we are in \'/\' we want to display the login page. if we are at \'/welcome\' we want to display the welcome page. In order to that we will Routes to our main module \'myStoreApp\'. Lets go to app.coffee and make the following modifications:
 
  {% highlight coffeescript %}
  # Define main module and its dependencies
@@ -176,11 +176,11 @@ AC 1 seems to require a change on the flow. We need to add another test to our t
  )
  {% endhighlight %}
 
- Lets run our app. 'grunt server' and we should find the login form being displayed.
+ Lets run our app. \'grunt server\' and we should find the login form being displayed.
 
- The url is 'http://localhost:9000/#/' The portion we should be paying attention to is '#/'.
+ The url is \'http://localhost:9000/#/\' The portion we should be paying attention to is \'#/\'.
 
- If we change the url manually to 'http://localhost:9000/#/welcome' the application will change the view and it will now display the welcome phrase only.
+ If we change the url manually to \'http://localhost:9000/#/welcome\' the application will change the view and it will now display the welcome phrase only.
 
  AC 1 seems to be covered. We are in a good state to commit our code.
 
