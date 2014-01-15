@@ -176,9 +176,12 @@ If you get \"Karma is not a task\" or "Karma is not found". Please execute
 
 ### Whats Next?
 
+   We will be back with much more TDD action. Always check our [Workshop Section][5] for more posts.
+
 
 
 [1]: http://ng-learn.org/2013/11/AngularJS_Workshop_From_Zero_To_Ninja_Turtle_Jr/
 [2]: http://ng-learn.org/2013/11/AngularJS_Workshop_From_Zero_To_Ninja_Jr_Part_2/
 [3]: http://ng-learn.org/2013/12/AngularJS_Workshop_From_Zero_To_Ninja_Jr_Part3/
 [4]: http://ng-learn.org/2013/12/AngularJS_Workshop_From_Zero_To_Ninja_Jr_Part4/
+[5]: http://ng-learn.org/tags/workshop.html
