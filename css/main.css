@@ -280,3 +280,16 @@ td, th {
     text-align: center;
     border: 1px solid
 }
+
+
+.logo-container {
+    background-color: black;
+    width: 15%;
+    float: left;
+    margin: 0 15px 0 0;
+    padding: 5px;
+}
+
+.logo {
+    width: 100%
+}
