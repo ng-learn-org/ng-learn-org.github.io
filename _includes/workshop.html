@@ -1,0 +1,56 @@
+<script data-require="angular.js@1.2.10" data-semver="1.2.10"
+        src="http://code.angularjs.org/1.2.10/angular.js"></script>
+<script data-require="firebase@*" data-semver="1.0.2"
+        src="https://cdn.firebase.com/js/client/1.0.2/firebase.js"></script>
+<script data-require="angularfire@0.5.0" data-semver="0.5.0"
+        src="https://cdn.firebase.com/libs/angularfire/0.5.0/angularfire.js"></script>
+
+
+<div ng-app="workshopApp" ng-controller="MainCtrl" class="side-box" style="width:70%">
+    <div class="alert alert-success" style="min-height: 110px">
+        <p>Interested in online or classroom AngularJs Workshop?</p>
+        <button class="btn btn-primary pull-right" ng-click="queryCompleted=!queryCompleted" style="margin-top:5px">Sign me in!</button>
+    </div>
+    <form role="form" ng-hide="queryCompleted">
+        <div class="form-group">
+            <!-- <label for="email">Email address</label> -->
+            <input type="email" class="form-control" id="email" placeholder="Email" ng-model="candidate.email" required>
+        </div>
+        <div class="form-group">
+            <!-- <label for="city">City</label> -->
+            <input type="text" class="form-control" id="city" placeholder="City" ng-model="candidate.city" required>
+        </div>
+        <div class="form-group">
+            <!-- <label for="state">State</label> -->
+            <input type="text" class="form-control" id="state" placeholder="State" ng-model="candidate.state" required>
+        </div>
+        <div class="form-group">
+            <!-- <label for="countr">country</label> -->
+            <input type="text" class="form-control" id="state" placeholder="Country" ng-model="candidate.country">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="addPerson()">Submit</button>
+        <!-- <button type="submit" class="btn btn-default" ng-click="cleanForm(); queryCompleted = false">Reset</button> -->
+    </form>
+    <br>
+
+    <div class="alert alert-success" ng-if="thanks">We'll be in touch!</div>
+</div>
+
+<script>
+    var app = angular.module('workshopApp', ['firebase']);
+    app.controller('MainCtrl', function ($scope, $firebase) {
+
+
+        $scope.queryCompleted = true;
+
+        var peopleRef = new Firebase("https://nglearn.firebaseio.com/people");
+        $scope.people = $firebase(peopleRef);
+        $scope.addPerson = function () {
+            $scope.people.$add($scope.candidate);
+            $scope.candidate = "";
+            $scope.queryCompleted = true;
+            $scope.thanks = true;
+        }
+
+    });
+</script>
