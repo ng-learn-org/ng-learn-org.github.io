@@ -2,7 +2,7 @@
 <!-- article -->
 <article>
   <header class="post-meta">
-    <h3>{{ post.title }}</h3>
+    <h3><a href="{{ post.url }}" rel="bookmark permalink">{{ post.title }}</a></h3>
     <ul>
       <li><i class="fa fa-calendar"></i>{{ post.date | date: "%B %d, %Y" }}</li>
       <li><i class="fa fa-user"></i>{{ post.author}}</li>
@@ -15,10 +15,16 @@
     </ul>
   </header>
   <div class="content">
+    {% if post.image %}
+    <div class="logo-container">
+      <img src="{{ post.image}}" class="logo"/>
+    </div>
+    {% endif %}
+
     {{ post.excerpt }}
   </div>
   <footer>
-    <a href="{{ post.url }}" class="btn pull-right btn-custom">Read More</a>
+    <a href="{{ post.url }}" class="btn pull-right btn-custom read-more-align">Read More</a>
   </footer>
 </article>
 <hr>

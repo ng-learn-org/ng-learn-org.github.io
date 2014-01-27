@@ -16,10 +16,11 @@ function appendDocument( document ) {
     }
     $('#search-results')
         .append('<article><header class="post-meta">'+
-                '<h3>'+document.title+'</h3></header>'+
+                '<h3><a href="'+ document.url + '" rel="bookmark permalink">'+
+                document.title+'</a></h3></header>'+
                 '<div class="content">'+content+'</div>'+
                 '<footer>'
-                +'<a href="'+document.url+'" class="btn btn-custom">Read More</a>'
+                +'<a href="'+document.url+'" class="btn btn-custom read-more-align">Read More</a>'
                 +'</footer>' +
                 '<hr>');
 }

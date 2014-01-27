@@ -6,10 +6,12 @@
         src="https://cdn.firebase.com/libs/angularfire/0.5.0/angularfire.js"></script>
 
 
-<div ng-app="workshopApp" ng-controller="MainCtrl" class="side-box" style="width:70%">
-    <div class="alert alert-success" style="min-height: 110px">
-        <p>Interested in online or classroom AngularJs Workshop?</p>
-        <button class="btn btn-primary pull-right" ng-click="queryCompleted=!queryCompleted" style="margin-top:5px">Sign me in!</button>
+<div ng-app="workshopApp" ng-controller="MainCtrl" class="side-box">
+    <div class="alert alert-success">
+      <p>Interested in online or classroom AngularJS Workshop?</p>
+      <p style="text-align: right">
+        <button class="btn btn-custom" ng-click="queryCompleted=!queryCompleted">Sign me in!</button>
+      </p>
     </div>
     <form role="form" ng-hide="queryCompleted">
         <div class="form-group">

@@ -3,7 +3,7 @@
   <ul class="cloud-tag">
     {% for category in site.categories %}
     {% assign tag = category[0] %}
-    <li><i class="fa fa-tag"></i><a href="/tags/{{ tag }}.html">
+    <li><a href="/tags/{{ tag }}.html">
         {{ tag | replace:'_',' ' | capitalize }} ({{ site.categories[tag].size }})
     </a></li>
     {% endfor %}

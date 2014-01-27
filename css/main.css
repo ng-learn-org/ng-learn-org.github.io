@@ -1,6 +1,8 @@
 /* General */
 body, html {
     height: 100%;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1em;
 }
 
 body {
@@ -23,17 +25,17 @@ h1,h2,h3,h4 {
     font-size: 3em;
     letter-spacing: -0.1em;
     font-color: #222;
-    padding-left: 70px;
+    padding: 4px 15px;
 }
 
 .navbar-brand-img {
-    position: absolute;
+    max-height: 60px;
 }
 
 #navbar a {
     text-transform: uppercase;
     font-size: 1.05em;
-    font-weight: 400;
+    font-weight: 700;
     padding: 1.1em 1.5em;
 }
 
@@ -42,7 +44,8 @@ header .navbar {
 }
 
 header .navbar-default {
-    border-bottom: 3px solid #e7e7e7;}
+    /* border-bottom: 3px solid #e7e7e7; */
+}
 
 
 #search-box {
@@ -72,11 +75,14 @@ article footer {
 /* /Article */
 
 /* Button */
+.read-more-align {
+    margin-right: 60px;
+}
+
 .btn-custom {
     color: #fff;
     background: #1abc9c;
     border-radius: 0px;
-    margin-right: 60px;
 }
 
 .btn-custom:hover {
@@ -130,11 +136,6 @@ article footer {
 .cloud-tag {
     padding-left: 0px;
     list-style: none;
-}
-
-.cloud-tag li {
-    display: inline;
-    margin-right: 1em;
 }
 
 /* footer */
@@ -229,7 +230,7 @@ article footer {
 }
 
 .navbar-custom li.active {
-    border-bottom: 3px solid #72c02c;
+
 }
 
 .navbar-custom a {
@@ -247,11 +248,14 @@ article footer {
 .navbar-custom li a:hover {
     text-decoration: none;
     color: #fff;
-    background: rgba(0,0,0,0);
+    background: rgba(82,91,103,0.5);
+    border-bottom: 4px solid #72c02c;
 }
 
 .navbar-custom .open a, .navbar-custom .open a:focus {
-    background-color: #585f69;
+    background: rgba(82,91,103,0.5);
+    border-bottom: 4px solid #72c02c;
+                            
 }
 
 .navbar-custom .open a:hover {
@@ -283,7 +287,6 @@ td, th {
 
 
 .logo-container {
-    background-color: black;
     width: 15%;
     float: left;
     margin: 0 15px 0 0;
@@ -292,4 +295,9 @@ td, th {
 
 .logo {
     width: 100%
+}
+
+/* quote */
+blockquote {
+    font-style: italic;
 }

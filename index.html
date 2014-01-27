@@ -25,11 +25,17 @@ title: Blog
     </header>
 
     <div class="content">
+      {% if post.image %}
+      <div class="logo-container">
+        <img src="{{ post.image}}" class="logo"/>
+      </div>
+      {% endif %}
+
       {{ post.excerpt }}
     </div>
 
     <footer>
-      <a href="{{ post.url }}" class="btn pull-right btn-custom">Read More</a>
+      <a href="{{ post.url }}" class="btn pull-right btn-custom read-more-align">Read More</a>
     </footer>
 
   </article>
