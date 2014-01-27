@@ -47,6 +47,9 @@ header .navbar-default {
     /* border-bottom: 3px solid #e7e7e7; */
 }
 
+.icon-bar {
+    background: #dadada;
+}
 
 #search-box {
     width: 20em;
