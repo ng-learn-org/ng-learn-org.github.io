@@ -1,6 +1,6 @@
-<section class="side-box">
+<section class="side-box hidden-xs hidden-sm">
   <h3>Tags</h3>
-  <ul class="cloud-tag hidden-xs hidden-sm">
+  <ul class="cloud-tag">
     {% for category in site.categories %}
     {% assign tag = category[0] %}
     <li><a href="/tags/{{ tag }}.html">
