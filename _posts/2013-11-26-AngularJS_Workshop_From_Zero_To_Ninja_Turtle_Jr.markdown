@@ -120,7 +120,7 @@ In this couple of steps we install all dependencies and our complete tool chain.
 - Lets update our welcome message
 
     {% highlight html %}
-    <div>Welcome to the AngularJS World, {{userName}}</div>
+    <div>Welcome to the AngularJS World, {{ "{{userName"}}}}</div>
     {% endhighlight %}
 
 - Start the app by going to our command line and running
@@ -131,7 +131,7 @@ In this couple of steps we install all dependencies and our complete tool chain.
 
   By running this command, we have just created a small nodejs http server that will serve our application. But Grunt is not part of our scope today. Play along and lets go back to AngularJS.
 
-  **Notes:** The application should say \"Welcome to the AngularJS World,\" but the \"{{userName}}\" portion should not be visible. Angular has kicked in and it does not display it because that variable is not binded to anything, yet!
+  **Notes:** The application should say \"Welcome to the AngularJS World,\" but the \"{{ "{{userName"}}}}\" portion should not be visible. Angular has kicked in and it does not display it because that variable is not binded to anything, yet!
 
 ### Step 1 - Defining our first module
 

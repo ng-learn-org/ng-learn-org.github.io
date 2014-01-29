@@ -58,7 +58,7 @@ Before doing anything new, lets bring everybody to the same page. Please run the
 - Now we are going to create a controller and provide our application some behaviour. Open index.html and lets add ng-controller to our div.
 
  {% highlight html %}
- <div ng-controller="welcomeController">Welcome to the AngularJS World, {{userName}}</div>
+ <div ng-controller="welcomeController">Welcome to the AngularJS World, {{ "{{userName"}}}}</div>
  {% endhighlight %}
 
  **Notes:** When you do this, Angular will look for a controller - inside of our myStoreApp module - called welcomeController.
@@ -103,7 +103,7 @@ Before doing anything new, lets bring everybody to the same page. Please run the
 
  {% highlight html %}
  <div ng-controller="welcomeController">
-     Welcome to the AngularJS World, {{userName}}
+     Welcome to the AngularJS World, {{ "{{userName"}}}}
      <hr>
      <p>Inside the controller: <input name="userName" ng-model="userName"/></p>
  </div>
