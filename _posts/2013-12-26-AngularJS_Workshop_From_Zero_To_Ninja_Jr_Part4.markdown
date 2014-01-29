@@ -77,7 +77,7 @@ If you get \"Karma is not a task\" or \"Karma is not found\". Please execute
 
 2. As a User, when I fill in the login form, then I should be redirected to my welcome page.
 
-3. As a User, when I get to my welcome page, then I should see the phrase \"Welcome to the AngularJS World, {{fullName}}\".
+3. As a User, when I get to my welcome page, then I should see the phrase \"Welcome to the AngularJS World, FULL_NAME_HERE\".
 
 **Assumptions:**
 
@@ -102,7 +102,7 @@ AC 1 seems to require a change on the flow. We need to add another test to our t
 
  If we run \'grunt test\' then all unit and e2e test will be executed. We now have a failing test.
 
- - **Development Flow - Coding:**  Adding an H1 tag in our index.html would be enough to make this test go green. Since we are already there, lets add a small form requesting a username and password.
+ - **Development Flow - Coding:**  Adding an H1 tag (with the "Login" text) in our index.html would be enough to make this test go green. Since we are already there, lets add a small form requesting a username and password.
 
  {% highlight html %}
  <div>
@@ -115,7 +115,7 @@ AC 1 seems to require a change on the flow. We need to add another test to our t
  </div>
 
  <div ng-controller="welcomeController">
-     Welcome to the AngularJS World, {{fullName}}
+     Welcome to the AngularJS World, {{"{{fullName"}}}}
  </div>
  {% endhighlight %}
 

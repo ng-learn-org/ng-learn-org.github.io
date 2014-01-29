@@ -66,7 +66,7 @@ If you get \"Karma is not a task\" or \"Karma is not found\". Please execute
     npm install karma-ng-scenario --save-dev
 
 
- **AC:** As a User, when I open myStore home page, then I should see the phrase \"Welcome to the AngularJS World, {{fullName}}\".
+ **AC:** As a User, when I open myStore home page, then I should see the phrase \"Welcome to the AngularJS World, FULL_NAME_HERE\".
 
  **Assumptions:** The application already has an object called profile that contains firstName and lastName.
 
@@ -98,7 +98,7 @@ If you get \"Karma is not a task\" or \"Karma is not found\". Please execute
         expect(scope.fullName).toBe "First Last"
   {% endhighlight %}
 
-  Lets run the tests, go to the console and execute \'grunt test\'. You will see \"Expected undefined to be \'Santiago Esteva\'.\" and \"PhantomJS 1.9.2 (Linux): Executed 1 of 1 (1 FAILED) ERROR (0.183 secs / 0.009 secs)\"
+  Lets run the tests, go to the console and execute \'grunt test\'. You will see \"Expected undefined to be \'First Last\'.\" and \"PhantomJS 1.9.2 (Linux): Executed 1 of 1 (1 FAILED) ERROR (0.183 secs / 0.009 secs)\"
   That\'s actually great. This is the expected output. Now we have a failing unit test that we can code against. Kudos!
 
  - **Development Flow - Coding:** Now we will write the minimum amount of code to make the unit test pass. In our app.coffee we will create the function to compose the fullName
@@ -112,7 +112,7 @@ If you get \"Karma is not a task\" or \"Karma is not found\". Please execute
   The business logic is covered. Lets make the changes on the UI. Go to index.html and update the welcome phrase div.
 
   {% highlight html %}
-  Welcome to the AngularJS World, {{fullName}}
+  Welcome to the AngularJS World, {{"{{fullName"}}}}
   {% endhighlight %}
 
   Lets run the app.
@@ -121,7 +121,7 @@ If you get \"Karma is not a task\" or \"Karma is not found\". Please execute
 
   Lets take a look at our application on te browser.
 
-  **Q:** What??? How come we still see \{\{fullName\}\}?
+  **Q:** What??? How come we still see '\{\{fullName\}\}'?
 
   **A:** That\'s because we don\'t have a preexisting profile object.
 

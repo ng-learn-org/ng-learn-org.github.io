@@ -87,7 +87,7 @@ If you get "Karma is not a task" or "Karma is not found". Please execute
 
 ### AC 3
 
- "As a User, when I get to my welcome page, then I should see the phrase "Welcome to the AngularJS World, {{fullName}}"."
+ "As a User, when I get to my welcome page, then I should see the phrase "Welcome to the AngularJS World, FULL_NAME_HERE"."
 
  **Assumptions:**
    1. All login attempts are successful.
@@ -107,7 +107,7 @@ If you get "Karma is not a task" or "Karma is not found". Please execute
      beforeEach inject ($injector) ->
        profileService = $injector.get 'profileService'
 
-     it "login user with username and password", ->
+     it "should login user with username and password", ->
        profileService.login("myUser", "myPassword")
    {% endhighlight %}
 
