@@ -84,7 +84,7 @@ We only care to react when the variable (page) changes.
 Our directive should look something like this:
 
 {% highlight html %}
-<div data-my-progress-bar="{{"{{pageIndex"}}}}">
+<div data-my-progress-bar="{{"{{pageIndex"}}}}" data-currentPageStyle="active">
   <span>Select Product</span>
   <span>Shipping Info</span>
   <span>Billing Info</span>
@@ -118,7 +118,7 @@ Lets write the code for this. As always the test comes first:
       it("should show 1st span highlighted when Page 1", function() {
 
         // Create html fragment
-        element = angular.element('<div data-my-progress-bar="1"><span>Select Product</span><span>Shipping Info</span><span>Billing Info</span><span>Confirmation</span></div>');
+        element = angular.element('<div data-my-progress-bar="1" data-currentPageStyle="active"><span>Select Product</span><span>Shipping Info</span><span>Billing Info</span><span>Confirmation</span></div>');
 
         // Compile a piece of HTML containing the directive
         $compile(element)($scope);
@@ -139,7 +139,7 @@ Having written the first test, the 3 remaining scenarios are straightforward. Be
 
 {% highlight javascript %}
 it('should show 2nd span highlighted when Page 2', function () {
-      element = angular.element('<div data-my-progress-bar="2"><span>Select Product</span><span>Shipping Info</span><span>Billing Info</span><span>Confirmation</span></div>');
+      element = angular.element('<div data-my-progress-bar="2" data-currentPageStyle="acive"><span>Select Product</span><span>Shipping Info</span><span>Billing Info</span><span>Confirmation</span></div>');
 
       $compile(element)($scope);
       $scope.$digest();
@@ -151,7 +151,7 @@ it('should show 2nd span highlighted when Page 2', function () {
 
 })
 it('should show 3rd span highlighted when Page 3', function () {
-      element = angular.element('<div data-my-progress-bar="3"><span>Select Product</span><span>Shipping Info</span><span>Billing Info</span><span>Confirmation</span></div>');
+      element = angular.element('<div data-my-progress-bar="3" data-currentPageStyle="active"><span>Select Product</span><span>Shipping Info</span><span>Billing Info</span><span>Confirmation</span></div>');
 
       $compile(element)($scope);
       $scope.$digest();
@@ -163,7 +163,7 @@ it('should show 3rd span highlighted when Page 3', function () {
 
 })
 it('should show 4th span highlighted when Page 4', function () {
-      element = angular.element('<div data-my-progress-bar="4"><span>Select Product</span><span>Shipping Info</span><span>Billing Info</span><span>Confirmation</span></div>');
+      element = angular.element('<div data-my-progress-bar="4" data-currentPageStyle="active"><span>Select Product</span><span>Shipping Info</span><span>Billing Info</span><span>Confirmation</span></div>');
 
       $compile(element)($scope);
       $scope.$digest();
@@ -196,32 +196,33 @@ Having finished writting the test, it\'s now time to write the directive.
           link: function(scope, element, attrs) {
             var spans = element.find("span");
             var num = parseInt(attrs.myProgressBar);
+            var cssClass = attrs.currentpagestyle;
 
             switch( num )
             {
               case 1:
-                spans[0].className = "active";
+                spans[0].className = cssClass;
                 spans[1].className = "";
                 spans[2].className = "";
                 spans[3].className = "";
                 break;
               case 2:
                 spans[0].className = "";
-                spans[1].className = "active";
+                spans[1].className = cssClass;
                 spans[2].className = "";
                 spans[3].className = "";
                 break;
               case 3:
                 spans[0].className = "";
                 spans[1].className = "";
-                spans[2].className = "active";
+                spans[2].className = cssClass;
                 spans[3].className = "";
                 break;
               default:
                 spans[0].className = "";
                 spans[1].className = "";
                 spans[2].className = "";
-                spans[3].className = "active";
+                spans[3].className = cssClass;
             }
           }
         };
@@ -232,7 +233,7 @@ Having finished writting the test, it\'s now time to write the directive.
 So now each html has:
 
 {% highlight html %}
-  <div data-my-progress-bar="{{"{{pageIndex"}}}}">
+  <div data-my-progress-bar="{{"{{pageIndex"}}}}" date-currentPageStyle="active">
     <span>Select Product</span>
     <span>Shipping Info</span>
     <span>Billing Info</span>
@@ -240,7 +241,7 @@ So now each html has:
   </div>
 {% endhighlight %}
 
-Having replaced the original code, we removed the jQuery library dependency as well as the hardcoded id ("progressBar"). As a result, now we have a reusable, independent, tested -and testable- directive.
+Having replaced the original code, we removed the jQuery library dependency as well as the hardcoded id ("progressBar") and CSS ("active"). As a result, now we have a reusable, independent, tested -and testable- directive.
 
-We\'ll show how this same directive can be written in a different way in the next post. Visit us shortly!
+Please note that this directive is only reusable within the same app and for that purpose, since the quantity of "span" elements (pages) and their names are fixed. We\'ll show you how this same directive can be written in a different way (more flexible) in the next post. Visit us shortly!
 [1]:http://ng-learn.org/2014/01/Dom-Manipulations/
