@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Best Practice - Simple Directive Sample
+title: Best Practice - Simple Directive Example
 author: Gonzalo do Carmo Norte
 categories: [best-practices, beginner]
 ---
