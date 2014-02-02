@@ -133,7 +133,7 @@ Lets write the code for this. As always the test comes first:
     });
     {% endhighlight %}
 
-So far we have created only one test, where after compiling the code, our directive applies the "active" CSS class to the correspoding element based on the page the user is currently on.
+So far we have created only one test, where after compiling the code, our directive applies the "active" CSS class to the corresponding element based on the page the user is currently on.
 
 Having written the first test, the 3 remaining scenarios are straightforward. Below are them for your reference:
 
