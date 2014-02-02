@@ -1,0 +1,154 @@
+---
+layout: post
+title: Best Practice - Simple Directive Example Improved
+author: Gonzalo do Carmo Norte
+categories: [best-practices, beginner]
+---
+
+Going back to our [last post regarding a simple directive example][1], let\'s see how we can make this directive a little bit more flexible so that it can be reused without the previous limitation of having the number of pages fixed.
+
+Just to recap, below is the directive we used:
+
+{% highlight html %}
+<div data-my-progress-bar="{{"{{pageIndex"}}}}" data-currentPageStyle="active">
+  <span>Select Product</span>
+  <span>Shipping Info</span>
+  <span>Billing Info</span>
+  <span>Confirmation</span>
+</div>
+{% endhighlight %}
+
+Remember:
+
+We use 'data-' prefix to make sure html validates and we do not cause IE7, 8 browsers to go into quirks mode. Very Important!!!!
+
+We use 'my-' prefix to determine this is a custom directive that belongs to our team.
+
+Even though we would like to add more pages in the HTML above, our directive wouldn\'t work since the quantity of "span" elements in our code was fixed. In other words, if we added more "span" elements with new page names, the existing code would not know anything apart from the first fourth "span" elements. As a result, the "active" class would never be assigned to any new "span" element.
+
+We said we were going to show you a more flexible way of coding this directive. This way actually involves having a non-fixed number of pages. Taking advantage of this change, we\'re going to code this directive in a slighty different way.
+
+Our new directive should look like:
+{% highlight html %}
+<my-other-progress-bar data-currentPage="{{"{{pageIndex"}}}}" data-currentPageStyle="active" data-pages="Select Product|Confirmation"></my-other-progress-bar>
+{% endhighlight %}
+
+In this case:
+- the directive behaves as an HTML element, not attribute as before.
+- the directive has one extra attribute -"data-pages"-, which is intended to have the page names separated by "|".
+
+As always the test comes first. Let\'s use the first one from the previous post and  update the HTML with our new code:
+
+{% highlight javascript %}
+    describe("Unit testing other progress bar directive", function() {
+      var $compile, $scope, element;
+      $scope = element = $compile = void 0;
+
+      // Load the module, which contains the directive
+      beforeEach(module("sampleTestDirectivesModule"));
+
+      // Store references to $rootScope and $compile so they are available to all tests in this describe block
+      beforeEach(inject(function(_$compile_, _$rootScope_) {
+
+        // The injector unwraps the underscores (_) from around the parameter names when matching
+        $scope = _$rootScope_;
+        return $compile = _$compile_;
+
+      }));
+
+      it("should show 1st span highlighted when Page 1", function() {
+
+        // Create html fragment
+        element = angular.element('<my-other-progress-bar data-currentPage="1" data-currentPageStyle="active" data-pages="Select Product|Shipping Info|Billing Info|Confirmation"></my-other-progress-bar>');
+        
+        // Compile a piece of HTML containing the directive
+        $compile(element)($scope);
+        $scope.$digest();
+
+        // Set expectations
+        expect(element.children()[0].className).toBe ("active");
+        expect(element.children()[1].className).toBe ("");
+        expect(element.children()[2].className).toBe ("");
+        expect(element.children()[3].className).toBe ("");
+      });
+    });
+{% endhighlight %}
+
+Please note that we haven\'t changed the expectations. Even though we updated our code, the result shouldn\'t change.
+
+Remember that after compiling the code, our directive applies the "active" CSS class to the corresponding element based on the page the user is currently on.
+
+Let\'s write some more tests changing the number of pages and the CSS selector for the page the user is on:
+
+{% highlight javascript %}
+  it('should show 1st span highlighted when Page 1', function () {
+      element = angular.element('<my-other-progress-bar data-currentPage="1" data-currentPageStyle="active" data-pages="Select Product|Confirmation"></my-other-progress-bar>');
+
+      $compile(element)($scope);
+      $scope.$digest();
+
+      expect(element.children()[0].className).toBe ("active");
+      expect(element.children()[1].className).toBe ("");
+})
+
+  it('should show 6th span highlighted when Page 6', function () {
+      element = angular.element('<my-other-progress-bar data-currentPage="6" data-currentPageStyle="current" data-pages="Select Product|Product Details|Shipping Info|Billing Info|Confirmation|Share Purchase"></my-other-progress-bar>');
+
+      $compile(element)($scope);
+      $scope.$digest();
+
+      expect(element.children()[0].className).toBe ("");
+      expect(element.children()[1].className).toBe ("");
+      expect(element.children()[2].className).toBe ("");
+      expect(element.children()[3].className).toBe ("");
+      expect(element.children()[4].className).toBe ("");
+      expect(element.children()[5].className).toBe ("current");
+})
+{% endhighlight %}
+
+Having finished writting the tests, it\'s now time to write the new directive:
+
+{% highlight javascript %}
+    // Here we create a module to group these directives jquery related
+    var sampleModule = angular.module("sampleTestDirectivesModule", []);
+
+    // Here we add a directive to the module. camelCase naming in this file (mySlide) and dash separated in html (my-Slide)
+    sampleModule.directive("myOtherProgressBar", [
+      function() {
+        return {
+
+          // This means the directive can be used as an element only
+          // Example <my-other-progress-bar> </my-other-progress-bar>
+          restrict: "E",
+
+          // This is the function that gets executed after Angular has compiled the html
+          link: function(scope, element, attrs) {
+            var cssClass = attrs.currentpagestyle;
+            var num = parseInt(attrs.currentpage);
+            var pages = attrs.pages.split("|");
+
+            for(var i = 0; i < pages.length; i++)
+            {
+              var cssClassStr = "";
+              if( num == i+1 )
+              {
+                cssClassStr = " class='" + cssClass + "'";
+              }
+
+              element.append("<span" + cssClassStr + ">" + pages[ i ] + "</span>");
+            }
+          }
+        };
+      }
+    ]);
+{% endhighlight %}
+
+So now each html has:
+
+{% highlight html %}
+<my-other-progress-bar data-currentPage="{{"{{pageIndex"}}}}" data-currentPageStyle="active" data-pages="Select Product|Confirmation"></my-other-progress-bar>
+{% endhighlight %}
+
+Having updated the original code, we are able to provide different quantities of pages and their corresponding names.
+
+[1]:http://ng-learn.org/2014/02/Simple-Directive-Example/
