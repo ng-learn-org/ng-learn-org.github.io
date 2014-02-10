@@ -21,7 +21,7 @@ In our [fourth chapter][4], we wrote our first component test (E2E), we set our 
 
 In our [fifth chapter][5], we analyzed different options to test our application flow (e2e vs unit tests).
 
-### What concepts and practices will be covered in the fourth part of this workshop?
+### What concepts and practices will be covered in the sixth part of this workshop?
 
 - Create Constant to fake a persistance layer
 - Unit Test Controllers with dependencies

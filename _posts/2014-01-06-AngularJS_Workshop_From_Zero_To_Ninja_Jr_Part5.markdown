@@ -20,7 +20,7 @@ In our [third chapter][3], we wrote our first unit test following our Test Drive
 
 In our [fourth chapter][4], we wrote our first component test (E2E), we set our first route and view.
 
-### What concepts and practices will be covered in the fourth part of this workshop?
+### What concepts and practices will be covered in the fifth part of this workshop?
 
 - Application Flow testing: E2E vs Unit Tests
 
