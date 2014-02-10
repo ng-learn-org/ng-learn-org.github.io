@@ -5,9 +5,9 @@ author: Gonzalo do Carmo Norte
 categories: [best-practices, beginner]
 ---
 
-Going back to our [last post regarding a simple directive example][1], let\'s see how we can make this directive a little bit more flexible so that it can be reused without the previous limitation of having the number of pages fixed.
+In our [post regarding a simple directive example][1], we showed how to create a very simple directive. We started our example taking some code from an HTML file and merging it into a directive. Having that done, it's now time to do some work in our directive to make it a little bit more flexible so that it can be reused without the previous limitation of having the number of pages fixed.
 
-Just to recap, below is the directive we used:
+Just to recap, below is the directive we did:
 
 {% highlight html %}
 <div data-my-progress-bar="{{"{{pageIndex"}}}}" data-currentPageStyle="active">
@@ -24,7 +24,7 @@ We use 'data-' prefix to make sure html validates and we do not cause IE7, 8 bro
 
 We use 'my-' prefix to determine this is a custom directive that belongs to our team.
 
-Even though we would like to add more pages in the HTML above, our directive wouldn\'t work since the quantity of "span" elements in our code was fixed. In other words, if we added more "span" elements with new page names, the existing code would not know anything apart from the first fourth "span" elements. As a result, the "active" class would never be assigned to any new "span" element.
+Even though we would like to add more pages in the HTML above, our directive wouldn\'t consider them since the quantity of "span" elements in our code was fixed. In other words, if we added more "span" elements with new page names, the existing code would not know anything apart from the first four "span" elements. As a result, the "active" class would never be assigned to any new "span" element.
 
 We said we were going to show you a more flexible way of coding this directive. This way actually involves having a non-fixed number of pages. Taking advantage of this change, we\'re going to code this directive in a slighty different way.
 
@@ -35,9 +35,9 @@ Our new directive should look like:
 
 In this case:
 - the directive behaves as an HTML element, not attribute as before.
-- the directive has one extra attribute -"data-pages"-, which is intended to have the page names separated by "|".
+- the directive has one extra attribute -"data-pages"-, which is intended to have the page names separated by "|". This way we can get rid of the fixed number of pages, from our previous simple example.
 
-As always the test comes first. Let\'s use the first one from the previous post and  update the HTML with our new code:
+As always the test comes first. Let\'s use the first one from the previous post and update the HTML with our new code:
 
 {% highlight javascript %}
     describe("Unit testing other progress bar directive", function() {
@@ -106,7 +106,7 @@ Let\'s write some more tests changing the number of pages and the CSS selector f
 })
 {% endhighlight %}
 
-Having finished writting the tests, it\'s now time to write the new directive:
+Having finished writting the tests, it\'s now time to write the new directive code:
 
 {% highlight javascript %}
     // Here we create a module to group these directives jquery related
