@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Best Practice - Simple Directive Example Improved
+title: A Simple Directive Example - Part 2
 author: Gonzalo do Carmo Norte
 categories: [best-practices, beginner]
 ---
 
-In our [post regarding a simple directive example][1], we showed how to create a very simple directive. We started our example taking some code from an HTML file and merging it into a directive. Having that done, it's now time to do some work in our directive to make it a little bit more flexible so that it can be reused without the previous limitation of having the number of pages fixed.
+In [the first part of this post][1], we refactored a jquery code block into pretty simple but limited directive.
+Now it's time to refactor our directive by removing the pages fixed amount limitation.
 
 Just to recap, below is the directive we did:
 
@@ -18,13 +19,25 @@ Just to recap, below is the directive we did:
 </div>
 {% endhighlight %}
 
-Remember:
+    Remember:
 
-We use 'data-' prefix to make sure html validates and we do not cause IE7, 8 browsers to go into quirks mode. Very Important!!!!
+    We use 'data-' prefix to make sure html validates and we do not cause IE7, 8 browsers to go into quirks mode. Very Important!!!!
 
-We use 'my-' prefix to determine this is a custom directive that belongs to our team.
+    We use 'my-' prefix to determine this is a custom directive that belongs to our team.
 
-Even though we would like to add more pages in the HTML above, our directive wouldn\'t consider them since the quantity of "span" elements in our code was fixed. In other words, if we added more "span" elements with new page names, the existing code would not know anything apart from the first four "span" elements. As a result, the "active" class would never be assigned to any new "span" element.
+Even though we add more span/pages in the above HTML, our directive wouldn\'t consider them since the switch block's logic is only covering the first four span elements.
+
+ {% highlight html %}
+ <div data-my-progress-bar="{{"{{pageIndex"}}}}" data-currentPageStyle="active">
+   <span>Select Product</span>
+   <span>Shipping Info</span>
+   <span>Billing Info</span>
+   <span>Confirmation</span>
+   <span>Post Sale</span>
+ </div>
+ {% endhighlight %}
+
+As a result, the "active" class would never be assigned to any new "span" element.
 
 We said we were going to show you a more flexible way of coding this directive. This way actually involves having a non-fixed number of pages. Taking advantage of this change, we\'re going to code this directive in a slighty different way.
 
