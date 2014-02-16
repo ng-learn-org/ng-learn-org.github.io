@@ -11,7 +11,7 @@ Now your manager comes back with a smile on his face asking you to create a new 
 
 Some would be scared, somebody would run, not you!
 That's because you know how this thing actually works. You know you can always get the webDriver instance and do some vanilla selenium things.
-That's why the call you 'The Selenium dude' and sometimes other names which our outside the article's scope.
+That's why they call you 'The Selenium dude' and sometimes other names which are outside the article's scope.
 
 Well we have this at my job as well. We got two web applications we provide support to.
 
@@ -62,7 +62,7 @@ The 'element' keyword is exposed to all tests via the global. We can observe thi
     global.element = browser.element;
     {% endhighlight %}
 
-So my first approach was - following the same standard - exposing the browser.driver via an alias. A shorthand if you will. I did this in out protractor configuration, at the onPrepare method.
+So my first approach was - following the same standard - exposing the browser.driver via an alias. A shorthand if you will. I did this in our protractor configuration, at the onPrepare method.
 
     {% highlight js %}
     onPrepare: function(){
@@ -173,7 +173,7 @@ Among the dependencies we can find jasmine, mocha, chai, saucelabs, etc.
 **5- Fast to write tests**
 
 I think this quality is not actually provided by protractor itself but the pageObject pattern. Separating the concerns, giving classes/objects only one reason to change makes it easy to write tests.
-[Mandatory reading](1) if you only have an idea of what Im talking about.
+[Mandatory reading][1] if you only have an idea of what I'm talking about.
 
 Here is a very simple overview.
 
@@ -206,7 +206,7 @@ Part of my job was teaching how to write tests to a team coming from QTP sequent
 The assignment was over when this team was able to take over the project.
 
 It was a very slow learning curve. Even when we got a core knowledgeable group, it was hard to transmit the knowledge to the next guy.
-The pageObject pattern and unfamiliarity to Java prevented this project to escalate.
+The pageObject pattern and unfamiliarity to Java prevented this project from escalating.
 
 Forward 12 months and here I was facing the same issue; attempting to setup an automated regression but this time with a group of semi to senior Java developers.
 This group was being introduced to our new UI built with AngularJS, coffeescript, unit tested with jasmine, e2es, etc...the whole thing!
@@ -224,7 +224,7 @@ We wrote a test and a couple of page objects. We spent that morning together and
 Next day he got a new pair and same thing happened.
 After a couple of hours, the just arrived dev was ready to be the anchor on the story.
 
-There were times when the pair were stuck but it was always related to a selenium interaction they were doing for the first time; such as: "how do I select a value from this dropdown?".
+There were times when the pair was stuck but it was always related to a selenium interaction they were doing for the first time; such as: "how do I select a value from this dropdown?".
 These were expected problems, developers building experience on selenium interactions, the waiting dance, etc.
 
 A week later, with only one pair of rotating Java devs (new to js, cs, wd), we had written 30 end to end tests and around 60 page objects. I have only participated on the first test.
