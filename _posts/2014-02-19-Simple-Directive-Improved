@@ -37,7 +37,7 @@ Even though we add more span/pages in the above HTML, our directive wouldn\'t co
 </div>
 {% endhighlight %}
 
-The "active" class would never be assigned to any "span" element after the forth one. (in this case the "Post Sale" "span" element)
+The "active" class would never be assigned to any "span" element beyond the the forth one. (in this case the "Post Sale" "span" element)
 
 We said we were going to show you a more flexible way of coding this directive. This way actually involves having a non-fixed number of pages. Taking advantage of this change, we\'re going to code this directive in a slighty different way.
 
@@ -106,7 +106,7 @@ Let\'s write some more tests changing the number of pages and the CSS selector f
   })
 
   it('should show 6th span highlighted when Page 6', function () {
-    element = angular.element('<div data-my-other-progress-bar data-currentpage="6" data-currentpagestyle="selected" data-pages="['Select Product','Product Detais','Shipping Info','Billing Info','Confirmation','Share Purchase']"></div>');
+    element = angular.element('<div data-my-other-progress-bar data-currentpage="6" data-currentpagestyle="selected" data-pages="['Select Product','Product Details','Shipping Info','Billing Info','Confirmation','Share Purchase']"></div>');
       
     $compile(element)($scope);
     $scope.$digest();
@@ -126,7 +126,7 @@ Having finished writting the tests, it\'s now time to write the new directive co
   // Here we create a module to group these directives jquery related
   var sampleModule = angular.module("sampleTestDirectivesModule", []);
 
-  // Here we add a directive to the module. camelCase naming in this file (mySlide) and dash separated in html (my-Slide)
+  // Here we add a directive to the module. camelCase naming in this file (myOtherProgressBar) and dash separated in html (my-other-progress-bar)
   sampleModule.directive("myOtherProgressBar", [
     function() {
       return {
@@ -146,7 +146,7 @@ Having finished writting the tests, it\'s now time to write the new directive co
         },
 
         // This is the function that gets executed after Angular has compiled the html
-        // no need to do anything here
+        // no need to do anything here for this example
         link: function(scope, element, attrs) {
         }
       }
@@ -165,6 +165,14 @@ So now each html has:
 {% highlight html %}
 <div data-my-other-progress-bar data-currentPage="{{"{{pageIndex"}}}}" data-currentPageStyle="active" data-pages="['Select Product','Confirmation']"></div>
 {% endhighlight %}
+
+Let's point out that:
+- the directive is declared to be used as an attribute ("restrict" field)
+- the directive HTML code related is extracted and placed into a new separated file ("templateUrl" field)
+- the directive defines its inner scope with e variables ("scope" field)
+- the "link" function does not have any code and because of that it could be prefectly removed (same as "compile" function)
+
+Note: the real-world directive should have more code written (for instance some validation on the page number or CSS) but that is not the purpose of this post and is totally out of scope.-
 
 Having updated the original code, we are able to provide different quantities of pages and their corresponding names.
 
