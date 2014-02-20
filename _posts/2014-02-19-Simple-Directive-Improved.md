@@ -75,7 +75,7 @@ Let's consider the following:
 {% endhighlight %}
 
 
-The "active" class would never be assigned to any "span" element beyond the the forth one. (in this case the "Post Sale" "span" element)
+The "active" class would never be assigned to any "span" element beyond the forth one. (in this case the "Post Sale" "span" element)
 
 We said we were going to show you a more flexible way of coding this directive. This way actually involves having a non-fixed number of pages. Taking advantage of this change, we\'re going to code this directive in a slighty different way.
 
@@ -165,7 +165,7 @@ Having finished writting the tests, it\'s now time to write the new directive co
   // Here we create a module to group these directives jquery related
   var sampleModule = angular.module("sampleTestDirectivesModule", []);
 
-  // Here we add a directive to the module. camelCase naming in this file (myOtherProgressBar) and dash separated in html (my-other-progress-bar)
+  // Here we add a directive to the module. camelCase naming in this file (myProgressBar) and dash separated in html (my-progress-bar)
   sampleModule.directive("myProgressBar", [
     function() {
       return {
@@ -186,7 +186,7 @@ Having finished writting the tests, it\'s now time to write the new directive co
         }
 
         // This is the function that gets executed after Angular has compiled the html
-        // We are going to move our logic into our templare. Therefore, there is no need to add any logic in this function
+        // We are going to move our logic into our template. Therefore, there is no need to add any logic in this function
         // link: function(scope, element, attrs) {
         // }
       }
@@ -197,7 +197,7 @@ Having finished writting the tests, it\'s now time to write the new directive co
 Let's have a look at the "myTemplate.html" file:
 
 {% highlight html %}
-<span ng-repeat="page in allPages track"
+<span ng-repeat="page in allPages"
     {% raw %} ng-class="{ {{cssActivePage}}: $index == indexActivePage}">{{page}} {% endraw %}
 </span>
 
