@@ -25,12 +25,12 @@
         <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12">
 
           <!-- article -->
-          <article>
+          <article itemscope itemtype="http://schema.org/TechArticle">
             <header>
-              <h2>{{ page.title }}</h2>
+              <h2 itemprop="name">{{ page.title }}</h2>
               <ul>
-                <li><i class="fa fa-calendar"></i>{{ page.date | date_to_string }}</li>
-                <li><i class="fa fa-user"></i>{{ page.author}}</li>
+                <li itemprop="dateCreated"><i class="fa fa-calendar"></i>{{ page.date | date_to_string }}</li>
+                <li itemprop="author"><i class="fa fa-user"></i>{{ page.author}}</li>
                 <li><i class="fa fa-tags"></i>
                   {% for category in page.categories %}
                   <a href="/tags/{{ category }}.html">{{ category | replace:'_',' ' | capitalize }}</a>
@@ -41,7 +41,7 @@
               </ul>
             </header>
 
-            <div class="content">
+            <div class="content" itemprop="articleBody">
               {{ content }}
             </div>
 
