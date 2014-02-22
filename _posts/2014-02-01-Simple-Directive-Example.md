@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Best Practice - Simple Directive Example
+title: Simple Directive Example
 author: Gonzalo do Carmo Norte
-categories: [best-practices, beginner]
+categories: [beginner, directives]
 ---
 
 Going back to our [last post related to best practices and roles in AngularJS][1], let\'s talk a little bit more about this showing a really small example.

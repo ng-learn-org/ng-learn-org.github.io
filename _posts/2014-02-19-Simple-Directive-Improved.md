@@ -2,7 +2,7 @@
 layout: post
 title: A Simple Directive Example - Part 2
 author: Gonzalo do Carmo Norte
-categories: [beginner]
+categories: [beginner, directives]
 ---
 
 In [the first part of this post][1], we refactored a jQuery code block into a pretty simple but limited directive.
