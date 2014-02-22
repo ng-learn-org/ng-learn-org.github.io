@@ -7,7 +7,7 @@ categories: [beginner, validations, directives]
 
 I ll take you through a 6 steps progression on custom validations.
 We ll go from out of the box Angular provided validations to reusable directives components.
-In this article, we'll cover out of the box validations and unit testing and creating our first custom validation as a directive.
+In this article, we'll cover out of the box validations and unit testing/creating our first custom validation as a directive.
 
 ### Step 1 - Out of the box
 
