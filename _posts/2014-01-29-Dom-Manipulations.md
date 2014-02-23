@@ -2,7 +2,7 @@
 layout: post
 title: Best Practice - Dom Manipulations
 author: Santiago Esteva                                `
-categories: [best-practices]
+categories: [best-practices, beginner, directives]
 ---
 
 Lets talk about best practices and roles in AngularJS. A controller is the middle man.
