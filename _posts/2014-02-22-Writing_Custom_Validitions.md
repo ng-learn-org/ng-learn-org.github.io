@@ -27,7 +27,7 @@ Lets see a first simple example where we take advantage of out of the box valida
 
         <form name="searchForm" novalidate="" role="form">
           <label for="leaving_from" data-ng-class="{'error-req': searchForm.leaving_from.$invalid}">From</label>
-          <input type="text" placeholder="City or airport" id="leaving_from" name="leaving_from" data-ng-model="search.leavingFrom" required>
+          <input type="text" placeholder="City or airport" id="leaving_from" name="leaving_from" data-ng-model="search.leavingFrom" required data-ng-minlength="3">
 
           <button type="submit" data-ng-click="submitSearch()">submit</button>
           <button data-ng-click="reset()">reset</button>
