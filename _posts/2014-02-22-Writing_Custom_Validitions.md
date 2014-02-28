@@ -255,11 +255,9 @@ That's it. If you would like to play/see with the complete example, launch this 
 
 {% include plunker.html id="kBSBDrs74l8qNRGIy2wS" %}
 
-On Part 2 we will go through 4 more progressions on custom validations. We will handle much more complex validations over a combination of fields.
+On [Part 2][2] we will go through 4 more progressions on custom validations. We will handle much more complex validations over a combination of fields.
 Stay tuned.
 
 
 [1]:http://docs.angularjs.org/api/ng/directive/input
-
-
-
+[2]:http://ng-learn.org/2014/02/Wirting_Custom_Validations_Part2/
