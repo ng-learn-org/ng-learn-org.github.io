@@ -176,8 +176,8 @@ Go over the comments to see what its being done in every line.
         myApp.directive("myValidateBirthDate", function(dataSet){
 
           isDateOfBirthComplete = function(dateOfBirth){} //implementation left out intentionally
-          isDateOfBirthValid = function(dateOfBirth){} /implementation left out intentionally
-          isAdult = function(dateOfBirth) {} /implementation left out intentionally
+          isDateOfBirthValid = function(dateOfBirth){} //implementation left out intentionally
+          isAdult = function(dateOfBirth) {} //implementation left out intentionally
 
           return {
             // restrict to an attribute type.
