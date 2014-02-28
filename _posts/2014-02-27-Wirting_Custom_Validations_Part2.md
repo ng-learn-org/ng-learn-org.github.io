@@ -7,6 +7,7 @@ categories: [beginner, validations, directives]
 
 In this delivery, we are going to build a custom validation over a complex object.
 Then we will refactor our code iteratively until we get a nice semantic reusable component.
+If you would like to revisit Steps 1 and 2, read [Part 1][1]
 
 ### Step 3 - Complex Object Custom Validation
 
@@ -239,7 +240,7 @@ We will demonstrate how we can use this component infinite times and how we woul
 Stay tuned!
 
 
-
+[1]:http://ng-learn.org/2014/02/Writing_Custom_Validitions/
 
 
 
