@@ -138,7 +138,7 @@ Lets start with the directive's unit test:
           beforeEach(inject(function($compile, $rootScope){
             $scope = $rootScope;
             var element = angular.element(
-              '<form name="form"><input type="text" name="leaving_from" ng-model="leavingFrom" my-validate-airport-code></form>'
+              '<form name="form"><input type="text" name="leaving_from" data-ng-model="leavingFrom" data-my-validate-airport-code></form>'
             );
             $scope.model = { leavingFrom: null};
             $compile(element)($scope);
@@ -228,7 +228,7 @@ The first step is to add it to our input.
 
         <input type="text" placeholder="City or airport" id="leaving_from" name="leaving_from"
                 data-ng-model="search.leavingFrom" required data-ng-minlength="3"
-                my-validate-airport-code>
+                data-my-validate-airport-code>
 
 {% endhighlight %}
 
