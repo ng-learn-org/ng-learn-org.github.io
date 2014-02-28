@@ -94,13 +94,13 @@ Lets take a look at the different errors we listed.
 {% endhighlight %}
 
 - **formName.fieldName.$invalid** : searchForm.leaving_from.$invalid is looking at the validity of this field. This means all other rules should have passed to clean this error.
-- **formName.fieldName.$error** : is the object has containing all references to all invalid rules for an specific field.
+- **formName.fieldName.$error** : is the object containing all references to all invalid rules for an specific field.
 - **formName.fieldName.$error.required** : searchForm.leaving_from.$error.required is looking if our specific field has been entered by the user.
 - **formName.fieldName.$error.minlength** : searchForm.leaving_from.$error.minlength is looking if our specific field has at least 3 characters.
 - **formName.$error** : is the object has containing all references to all invalid rules for all fields inside the form.
 
 
-**Note**: Other built-in validations are: email, max, maxlength, min, minlength, number, pattern, required, url
+**Note**: Other built-in validations are: email, max, maxlength, min, minlength, number, pattern, required, url. More info: [angular-docs][1]
 
 If you would like to see the working example, launch the demo.
 
@@ -257,6 +257,9 @@ That's it. If you would like to play/see with the complete example, launch this 
 
 On Part 2 we will go through 4 more progressions on custom validations. We will handle much more complex validations over a combination of fields.
 Stay tuned.
+
+
+[1]:http://docs.angularjs.org/api/ng/directive/input
 
 
 
