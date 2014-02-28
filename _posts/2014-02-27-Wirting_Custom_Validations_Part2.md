@@ -38,7 +38,7 @@ We write the basics for our test first.
             $scope = $rootScope;
             var element = angular.element(
               '<form name="form">'
-                +'<div my-validate-birth-date data-ng-model="dateOfBirth">'
+                +'<div data-my-validate-birth-date data-ng-model="dateOfBirth">'
                   + 'Date Of Birth:<select data-ng-model="dateOfBirth.month" required name="monthOfBirth" data-ng-options="month as month for month in months">'
                   + '<option value="" selected="">Month</option></select>'
                   + '<select data-ng-model="dateOfBirth.day" required name="dayOfBirth" data-ng-options="day as day for day in days">'
@@ -58,7 +58,7 @@ We write the basics for our test first.
 
 {% endhighlight %}
 
-We basically created an element holding an html block that includes our directive. We compile it, trigger an digest cycle and we keep the form into a local variable.
+We basically created an element holding an html block that includes our directive. We compile it, trigger a digest cycle and we keep the form into a local variable.
 
 Lets keep moving and write our unit tests for one of the error messages.
 AC 1 and 2 display 'Incomplete Date of Birth' error. I will call this error message 'incompleteDateOfBirth' as the user has not submitted a complete date object.
@@ -134,7 +134,7 @@ We need to display 'Must be an adult' error when the date of birth diff with cur
               expect(form.$error.minorDateOfBirth).not.toBeDefined();
             });
 
-            it("should be invalid when day, month and year results in a combination combination where the year difference with current year is lower than 15 such as 1998", function(){
+            it("should be invalid when day, month and year results in a combination where the year difference with current year is lower than 15 such as 1998", function(){
               form.monthOfBirth.$setViewValue("2-Feb");
               form.dayOfBirth.$setViewValue(31);
               form.yearOfBirth.$setViewValue(1999);
@@ -142,7 +142,7 @@ We need to display 'Must be an adult' error when the date of birth diff with cur
               expect(form.$error.minorDateOfBirth.$valid).toBeFalsy()
             });
 
-            it("should be invalid when day, month and year results in a combination combination where the year difference with current year is higher than 15 such as 1998", function(){
+            it("should be false when day, month and year results in a combination where the year difference with current year is higher than 15 such as 1998", function(){
               form.monthOfBirth.$setViewValue("2-Feb");
               form.dayOfBirth.$setViewValue(31);
               form.yearOfBirth.$setViewValue(1970);
