@@ -68,13 +68,13 @@ AC 1 and 2 display 'Incomplete Date of Birth' error. I will call this error mess
           describe("incompleteDateOfBirth", function(){
 
             it('should be defined and initially set valid to false', function() {
-              expect(form.$error.incompleteDateOfBirth.$valid).toBeFalsy();
+              expect(form.$error.incompleteDateOfBirth[0].$valid).toBeFalsy();
             });
 
             it('should be set to invalid if user has only entered day', function(){
               form.monthOfBirth.$setViewValue("2-Feb");
               $scope.$digest();
-              expect(form.$error.incompleteDateOfBirth.$valid).toBeFalsy();
+              expect(form.$error.incompleteDateOfBirth[0].$valid).toBeFalsy();
             });
 
             it('should be false when user has entered day, month and year', function(){
@@ -108,7 +108,7 @@ We need to display 'Invalid Date of Birth' error when the combination results in
               form.dayOfBirth.$setViewValue(31);
               form.yearOfBirth.$setViewValue(1970);
               $scope.$digest();
-              expect(form.$error.invalidDateOfBith.$valid).toBeFalsy()
+              expect(form.$error.invalidDateOfBith[0].$valid).toBeFalsy()
             });
 
             it("should be false when day, month and year results in an valid combination such as 11 Feb", function(){
@@ -134,20 +134,20 @@ We need to display 'Must be an adult' error when the date of birth diff with cur
               expect(form.$error.minorDateOfBirth).not.toBeDefined();
             });
 
-            it("should be invalid when day, month and year results in a combination where the year difference with current year is lower than 15 such as 1998", function(){
+            it("should be invalid when day, month and year results in a combination combination where the year difference with current year is lower than 15 such as 1998", function(){
               form.monthOfBirth.$setViewValue("2-Feb");
-              form.dayOfBirth.$setViewValue(31);
-              form.yearOfBirth.$setViewValue(1999);
+              form.dayOfBirth.$setViewValue(11);
+              form.yearOfBirth.$setViewValue(2001);
               $scope.$digest();
-              expect(form.$error.minorDateOfBirth.$valid).toBeFalsy()
+              expect(form.$error.minorDateOfBirth[0].$valid).toBeFalsy();
             });
 
-            it("should be false when day, month and year results in a combination where the year difference with current year is higher than 15 such as 1998", function(){
+            it("should be valid when day, month and year results in a combination combination where the year difference with current year is higher than 15 such as 1998", function(){
               form.monthOfBirth.$setViewValue("2-Feb");
-              form.dayOfBirth.$setViewValue(31);
+              form.dayOfBirth.$setViewValue(11);
               form.yearOfBirth.$setViewValue(1970);
               $scope.$digest();
-              expect(form.$error.minorDateOfBirth).toBeFalsy()
+              expect(form.$error.minorDateOfBirth).toBeFalsy();
             });
 
           });

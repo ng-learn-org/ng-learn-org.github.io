@@ -157,12 +157,12 @@ Lets start with the directive's unit test:
 
           it('should contain invalidAiportCode when user enters an airport that starts with a different letter than a or A', function(){
             form.leaving_from.$setViewValue('SLC');
-            expect(form.$error.invalidAiportCode).toBeDefined();
+            expect(form.leaving_from.$error.invalidAiportCode).toBeDefined();
           });
 
           it('should not contain invalidAiportCode when user enters an airport that starts with letter than a or A', function(){
             form.leaving_from.$setViewValue('ALC');
-            expect(form.$error.invalidAiportCode).not.toBeDefined();
+            expect(form.leaving_from.$error.invalidAiportCode).toBeFalsy();
           });
 
         });
@@ -244,7 +244,7 @@ And then we add our error message to the errors' list.
             <li data-ng-show="searchForm.leaving_from.$invalid">Departure Airport is invalid</li>
             <li data-ng-show="searchForm.leaving_from.$error.required">Departure Airport is required</li>
             <li data-ng-show="searchForm.leaving_from.$error.minlength">Departure Airport should be at least 3 charachters</li>
-            <li data-ng-show="searchForm.$error.invalidAiportCode">Airport Code should start with letter A</li>
+            <li data-ng-show="searchForm.leaving_from.$error.invalidAiportCode">Airport Code should start with letter A</li>
           </ul>
         </div>
 
