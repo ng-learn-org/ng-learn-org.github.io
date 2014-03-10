@@ -65,7 +65,7 @@ Now lets write some tests.
           beforeEach(inject(function($compile, $rootScope){
             $scope = $rootScope;
             element = angular.element(
-              '<form name="form"><div my-birth-date ng-model="dateOfBirth"></div></form>'
+              '<form name="form"><div data-my-birth-date data-ng-model="dateOfBirth"></div></form>'
             );
             $scope.model = { dateOfBirth: null};
             $compile(element)($scope);
@@ -139,13 +139,13 @@ As you can see, Im injecting the data set I was previously using on our validati
                angular.extend(scope, dataSet);
              },
              template: "Date Of Birth:" +
-                  "<select ng-model='date.month' required name='monthOfBirth' data-ng-options='month as month for month in months'>" +
+                  "<select data-ng-model='date.month' required name='monthOfBirth' data-ng-options='month as month for month in months'>" +
                   "  <option value='' selected=''>Month</option> "+
                   " </select>" +
-                  " <select ng-model='date.day' required name='dayOfBirth' data-ng-options='day as day for day in days'> " +
+                  " <select data-ng-model='date.day' required name='dayOfBirth' data-ng-options='day as day for day in days'> " +
                   "  <option value='' selected=''>Day</option> " +
                   " </select> " +
-                  " <select ng-model='date.year'' required name='yearOfBirth'' data-ng-options='year as year for year in years'> " +
+                  " <select data-ng-model='date.year'' required name='yearOfBirth'' data-ng-options='year as year for year in years'> " +
                   " <option value='' selected=''>Year</option> " +
                   " </select> "
             }
@@ -187,18 +187,18 @@ And here is the whole picture so far:
 
 {% highlight html %}
 
-<body ng-app="myApp" ng-controller="searchCtrl">
+<body data-ng-app="myApp" data-ng-controller="searchCtrl">
 
     <div class="errors">
       <!-- We use submitted to hide all error msgs until its actually submitted-->
-      <ul ng-show="searchForm.submitted">
+      <ul data-ng-show="searchForm.submitted">
         <li data-ng-show="searchForm.leaving_from.$invalid">Departure Airport is invalid</li>
         <li data-ng-show="searchForm.leaving_from.$error.required">Departure Airport is required</li>
-        <li data-ng-show="searchForm.leaving_from.$error.minlength">Departure Airport should be at least 3 charachters</li>
+        <li data-ng-show="searchForm.leaving_from.$error.minlength">Departure Airport should be at least 3 characters</li>
         <li data-ng-show="searchForm.leaving_from.$error.invalidAiportCode">Airport Code should start with letter A</li>
-        <li ng-show="searchForm.$error.incompleteDateOfBirth">Incomplete Date of Birth</li>
-        <li ng-show="searchForm.$error.invalidDateOfBith">Invalid Date of Birth</li>
-        <li ng-show="searchForm.$error.minorDateOfBirth">Must be an adult</li>
+        <li data-ng-show="searchForm.$error.incompleteDateOfBirth">Incomplete Date of Birth</li>
+        <li data-ng-show="searchForm.$error.invalidDateOfBith">Invalid Date of Birth</li>
+        <li data-ng-show="searchForm.$error.minorDateOfBirth">Must be an adult</li>
       </ul>
     </div>
 
@@ -230,7 +230,7 @@ If you would like to play/see with the complete example, launch this demo.
 
 #### What does this have to do with Validations?
 
-The progression that it is been laid out in these 6 steps (4 so far published ) aims to demonstrate validations as well as a refactoring methodology taking simple or complex validations into components.
+The progression that it is been laid out in these 6 steps (4 so far published) aims to demonstrate validations as well as a refactoring methodology taking simple or complex validations into components.
 
 Step 5 will cover a very small tweak so we can reuse both directives and have multiple instances on the same page.
 Picture a Flight booking form where you need to enter multiple passengers birth dates.
@@ -242,10 +242,3 @@ Stay tuned!
 
 [1]:http://ng-learn.org/2014/02/Writing_Custom_Validitions/
 [2]:http://ng-learn.org/2014/02/Wirting_Custom_Validations_Part2/
-
-
-
-
-
-
-
