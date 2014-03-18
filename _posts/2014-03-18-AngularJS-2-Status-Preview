@@ -1,0 +1,147 @@
+---
+layout: post
+title: AngularJS 2.0 Status and Preview
+author: santiago Esteva
+categories: [ng-conf, angularjs-2]
+---
+
+AngularJS team has been busy working on AngularJS 2.0.  As we mentioned before [link][1], this is not a complex major update. This is a whole rewrite!
+Having learnt many lessons from AngularJS and AngularDart a lot of thinking is being done to produce the future modules.
+We will walk you through what you need to know.
+
+## What is AngularJS 2.0 all about?
+
+The team has opted to document an early architecture design document for each module.
+These documents have been available to the community. Early feedback!
+
+These are the many facets the team is working on:
+
+* This will become a table of contents (this text will be scraped).
+{:toc}
+
+Some have already received enough feedback for the team to produce a first working version.
+These are all moving targets and each deserve its own post to understand how each will work.
+Here is a brief intro to each subject.
+
+### Change Detection
+Watchtower.js is super-fast change detection library. This is a javascript port of an already implemented algorithm in AngularDart.
+
+If you would like to look at the source code, follow this link: <a href="https://github.com/angular/watchtower.js" target="_blank">watchtower.js</a>
+
+In future posts we will analyze this in detail.
+In the meantime, if you would like to read the design document, follow this link: <a href="https://docs.google.com/document/d/10W46qDNO8Dl0Uye3QX0oUDPYAwaPl0qNy73TVLjd1WI/edit#heading=h.qjnbvlr7uej1" target="_blank">Design Doc</a>
+
+**Note:** during the ng-conf Brian talked about Zone.js as a candidate for dirty checking. <a href="https://github.com/angular/zone.js/blob/master/zone.js" target="_blank">zone.js</a>
+
+### Dependency Injection
+The design doc is already out-dated but it serves as background history for the current version.
+
+You may also want to see an example. This is actually the source code for an example presented at the Ng-Conf.
+
+You may find all the ng-conf videos here: [http://ng-conf.ng-learn.org/][2] Look for dependency injection.
+
+        {% highlight bash%}
+        # Clone this repo (or your fork).
+        git clone https://github.com/angular/di.js.git
+
+        # Install all the the dev dependencies, such as Karma, Gulp, etc.
+        npm install
+
+        # If you wanna use "karma" or "gulp" commands, install also:
+        npm install -g karma-cli
+        npm install -g gulp
+
+        # Transpile ES6 into ./compiled/*
+        gulp build
+
+        # Watch all the sources and transpile on any change
+        gulp watch
+
+        gulp build_examples
+        gulp serve
+        {% endhighlight %}
+
+If you would like to look at the source code, follow this link: <a href="https://github.com/angular/di.js" target="_blank">di.js</a>
+
+In future posts we will analyze this in detail. In the meantime, if you would like to read the design document, follow this
+link: <a href="https://docs.google.com/document/d/1fTR4TcTGbmExa5w2SRNAkM1fsB9kYeOvfuiI99FgR24/edit#heading=h.2e8op9ntdrm0" target="_blank">Design Doc</a>
+
+### Templating
+The team has a first example using ShadowDom and they are currently working on bindings. Here is an indication on how a very simple directive could look like:
+
+        {% highlight html %}
+        <exp-hello></exp-hello>
+        {% endhighlight %}
+
+        {% highlight javascript %}
+        @ComponentDirective({
+          selector: 'exp-hello',
+          template: 'Hello world!'
+        })
+        {% endhighlight %}
+
+
+If you would like to look at the source code, follow this link: https://github.com/angular/templating
+In future posts we will analyze this in detail. In the meantime, if you would like to read the design document, follow this link: https://docs.google.com/document/d/1f5VWROeTI2kJwVKbNsrHuEz5IqtZe14OpoxM9fEYJNU/edit#
+
+### Persistance
+This is still being documented, commented and reviewed. There is a lot of thought and consideration being done on storage quotas on different browsers (desktop	 and mobile), promises, etc.  We will start hearing about rewritten and new modules such as ngHTTP, ngWebSocket, ngStore, ngOffline and ngData.
+In future posts we will analyze this in detail. In the meantime, if you would like to read the design document, follow this link:  https://docs.google.com/document/d/1DMacL7iwjSMPP0ytZfugpU4v0PWUK0BT6lhyaVEmlBQ/edit
+
+### Routing
+This is still being documented, commented and reviewed. The team is looking at Ember.js, Durandal (framework built on top of jQuery, Knockout and RequireJS) and  Passport (middleware for Express) for reference on other approaches.
+The goal is to cover proven requirements such as multiple, nested, state based views.
+In future posts we will analyze this in detail. In the meantime, if you would like to read the design document, follow this link:  https://docs.google.com/document/d/1I3UC0RrgCh9CKrLxeE4sxwmNSBl3oSXQGt9g3KZnTJI/edit#
+
+### Logging
+This subject also came up at the ng-conf. The need of a library that would allow a plugin module that helps logging a much meaningful stacktrace when working with an asynchronous event oriented language such as javascript for example.
+
+If you would like to look at the source code, follow this link: https://github.com/angular/diary.js
+In future posts we will analyze this in detail. In the meantime, if you would like to read the design document, follow this link: https://docs.google.com/document/d/1gGUEODxxDjY7azF8InqtN1pRcLo3WhGb8BcoIihyI80/edit
+
+### RTT & Annotations
+In future posts we will analyze this in detail. In the meantime, if you would like to read the design document, follow this link: https://docs.google.com/document/d/1u2cBiLV2aCXnAwXJOPghtxWoikH9hY6enUI1AE4k4cw/edit
+
+### Documentation
+Design Doc still unavailable. In the meantime, here is some code to look at: https://github.com/angular/dgeni
+
+### Benchmarking
+We have the design doc and even a demo!
+Demo: http://jbdeboer.github.io/todobenchmark/?show
+Source Code: https://github.com/angular/benchpress
+In future posts we will analyze this in detail. In the meantime, if you would like to read the design document, follow this link: https://docs.google.com/document/d/1pHMbpInJtiMF2zp4AZaW2jYSkVvNQZLLYrqXhJRi2T8/edit
+
+### Touch/Animations
+Design doc available. Team is working on desktop and mobile use cases making emphasis on performance.
+
+In future posts we will analyze this in detail. In the meantime, if you would like to read the design document, follow this link: https://docs.google.com/document/d/16Z6Lun15DoWNrE2imk7N-2WiRAaqc954LOfU2-2JSoI/edit#
+
+### Package Repository
+This subject is more of an infrastructure concern on how each module (core, complimentary or third party) are being packaged and delivery. Its a great analysis on the different available options.
+In future posts we will analyze this in detail. In the meantime, if you would like to read the design document, follow this link: https://docs.google.com/document/d/14t1u5bjJV0TDJxNHhJnZe6Qu8Tn0muWytwjfuVPdAdY/edit#
+
+### Reference App
+During the ng-conf the team announced they will build an AngularJS app. This will serve as a reference on best practices for the community. It will also serve the team presenting real challenged on building a large scale app. So far this team has gained feedback from other teams at Google or from the community what are the challenges when building a large app with Angular.
+
+There is no code or design doc available yet. There is a placeholder here : https://projects.angularjs.org/
+You might also find interesting a blog post the team did on AngularJS style guide: http://blog.angularjs.org/2014/02/an-angularjs-style-guide-and-best.html
+
+### Scaffolding
+Yeoman, NgTailor are reference conventions set the team is analyzing.
+No doc or code examples available yet.
+
+### Build/Deploy
+These are more internal topics. Nevertheless, my personal experience has been that we greatly benefit from looking at how this team has setup their CI chain. Hopefully we will gain more insight on these subjects as well.
+
+### Notes
+
+#### Where is Grunt?
+As you may see from the different repos, Angular team is already working with Gulp.
+
+#### ES6
+You may also have noticed the need to Transpile ES6 to ES5 in order to use it with a current browser. Traceur is the tool that brings the transpiring super power to the table.
+https://github.com/google/traceur-compiler
+
+
+[1]:http://ng-learn.org/2014/01/AngularJS-2/
+[2]:http://ng-conf.ng-learn.org/
