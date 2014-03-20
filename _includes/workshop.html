@@ -48,6 +48,7 @@
         var peopleRef = new Firebase("https://nglearn.firebaseio.com/people");
         $scope.people = $firebase(peopleRef);
         $scope.addPerson = function () {
+            ga('send', 'event', 'workshop', 'inquiry');
             $scope.people.$add($scope.candidate);
             $scope.candidate = "";
             $scope.queryCompleted = true;
