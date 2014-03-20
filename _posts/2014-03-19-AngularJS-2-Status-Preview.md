@@ -66,7 +66,7 @@ We are currently in 33M.
 
     Object.observe() is a low-level API that lets you add a listener to be notified when a JavaScript object changes state.
 
-If you want to know more abour this pattern, follow this <a href="http://updates.html5rocks.com/2012/11/Respond-to-change-with-Object-observe" target="_blank">link</a>
+If you want to know more about this pattern, follow this <a href="http://updates.html5rocks.com/2012/11/Respond-to-change-with-Object-observe" target="_blank">link</a>
 and this <a href="http://wiki.ecmascript.org/doku.php?id=harmony:observe" target="_blank">link</a>.
 
 While we wait to the browser native change detection, the team has found a solution that is fast and more efficient than the current one available in AngularJS 1.2.
@@ -198,9 +198,7 @@ follow this <a href="https://docs.google.com/document/d/1f5VWROeTI2kJwVKbNsrHuEz
 #### What is ShadowDOM?
 
     Shadow DOM is designed to provide encapsulation by hiding DOM subtrees under shadow roots.
-    It provides a method of establishing and maintaining functional boundaries between DOM trees and
-    how these trees interact with each other within a document, thus enabling better functional encapsulation
-    within the DOM.
+    It provides a method of establishing and maintaining functional boundaries between DOM trees and how these trees interact with each other within a document, thus enabling better functional encapsulation within the DOM.
 
 If you would like to understand shadowDom, please follow these links:
 
@@ -311,7 +309,7 @@ follow this <a href="https://docs.google.com/document/d/14t1u5bjJV0TDJxNHhJnZe6Q
 ### Reference App
 During the ng-conf the team announced they will build an AngularJS app.
 This will serve as a reference on best practices for the community.
-It will also serve the team presenting real challenged on building a large scale app.
+It will also serve the team presenting real challenges on building a large scale app.
 So far this team has gained feedback from other teams at Google or from the community what are the challenges when building a large app with Angular.
 
 There is no code or design doc available yet. There is a placeholder here: <a href="https://projects.angularjs.org/" target="_blank">https://projects.angularjs.org/</a>
