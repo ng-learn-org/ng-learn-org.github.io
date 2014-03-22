@@ -10,7 +10,7 @@
     <div class="alert alert-success">
       <p>Interested in online or classroom AngularJS Workshop?</p>
       <p style="text-align: right">
-        <button class="btn btn-custom" ng-click="queryCompleted=!queryCompleted">Sign me in!</button>
+        <button class="btn btn-custom" ng-click="displayForm()">Sign me in!</button>
       </p>
     </div>
     <form role="form" ng-hide="queryCompleted">
@@ -48,11 +48,15 @@
         var peopleRef = new Firebase("https://nglearn.firebaseio.com/people");
         $scope.people = $firebase(peopleRef);
         $scope.addPerson = function () {
-            ga('send', 'event', 'workshop', 'inquiry');
             $scope.people.$add($scope.candidate);
             $scope.candidate = "";
             $scope.queryCompleted = true;
             $scope.thanks = true;
+        }
+
+        $scope.displayForm = function() {
+            $scope.queryCompleted =  !$scope.queryCompleted;
+            ga('send', 'event', 'workshop', 'inquiry');
         }
 
     });
