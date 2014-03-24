@@ -52,6 +52,7 @@
             $scope.candidate = "";
             $scope.queryCompleted = true;
             $scope.thanks = true;
+            ga('send', 'event', 'workshop', 'submitted');
         }
 
         $scope.displayForm = function() {
