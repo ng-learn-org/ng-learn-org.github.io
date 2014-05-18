@@ -118,7 +118,7 @@ Install ANT if you dont have it and set
 
 ## What's next?
 
-You take from now for a lil bit.
+You take it from here just for a lil bit.
 
 Between the project example setup by the generator and the [docs](http://ionicframework.com/docs/) you're gonna be just fine kiddo.
 
