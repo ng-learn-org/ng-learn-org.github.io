@@ -81,7 +81,8 @@ In order to build Android application we are missing the Android development kit
         export ANDROID_PLATFORM_TOOLS="$HOME/applications/android-sdk-linux/platform-tools"
         export PATH="$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$PATH"
 
-Install ANT if you dont have it and set
+- Install ANT if you dont have it following these instructions: http://ant.apache.org/manual/install.html
+- Set ANT_HOME to your bash profile:
 
         export ANT_HOME="$HOME/ant"
         export PATH="$PATH:$ANT_HOME/bin"
