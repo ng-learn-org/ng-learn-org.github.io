@@ -2,7 +2,7 @@
 layout: post
 title: Going Mobile with Ionic
 author: Santiago Esteva
-image: http://ng-learn.org/img/irene.png
+image: http://ng-learn.org/img/irene.jpg
 categories: [ionic, mobile]
 ---
 
