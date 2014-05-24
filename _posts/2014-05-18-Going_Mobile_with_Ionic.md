@@ -115,7 +115,7 @@ In order to build Android application we are missing the Android development kit
 
 #### Serve to Android Device - [docs](http://cordova.apache.org/docs/en/2.9.0/guide_getting-started_android_index.md.html)
 
-    cordova run android
+    grunt run:android
 
 ## What's next?
 
