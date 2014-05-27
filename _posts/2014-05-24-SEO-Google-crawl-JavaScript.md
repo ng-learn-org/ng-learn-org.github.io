@@ -13,7 +13,7 @@ If you've been at the [ng-conf][1] or watched the videos, Igor and Misko gave us
 They explained the team was not to focus on server side processing of the AngularJS views since these was not a problem for the framework
 and he slipped the questions "What if Google was already crawling the javascript based sites?"
 
-So yesterday, Google has announced on his webmaster's blog, they been crawling sites and interpreting javascript and css for some time now.
+So yesterday, Google has announced on its webmaster's blog, they been crawling sites and interpreting javascript and css for some time now.
 
 Google went through a learning period, which they refer to as "Understanding the pages".
 After some rights and wrongs they have now got the news out with some additional details on how to help crawlers on this new task.
