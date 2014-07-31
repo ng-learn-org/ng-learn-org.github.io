@@ -41,10 +41,12 @@ Lets take a look at our html.
 
 IonicFramework is giving a lot of features out of the box. ionPane, ionHeader,iOnContent provides the structure of our application.
 
-iOnSlideBox and ionSlide provides exactly what we needed. It gives us a box that knows how to slide back and forth when user swipes a finger. It also provides a service to delegate the control to a programatic api which we will take use to generate a 'Next' button. Multi Device slides render app, checked!
+iOnSlideBox and ionSlide provides exactly what we needed.
+It gives us a box that knows how to slide back and forth when user swipes a finger.
+It also provides a service to delegate the control to a programatic api which we will take use to generate a 'Next' button.
+Multi Device slides render app, checked!
 
 {% highlight markup %}
-
   <body ng-app="demo">
     <ion-pane >
 
@@ -56,12 +58,12 @@ iOnSlideBox and ionSlide provides exactly what we needed. It gives us a box that
         <ion-slide-box >
 
           <ion-slide ng-controller="slidesCtrl">
-            <h1>Slide Index: {{ui.index}}</h1>
+            <h1>Slide Index: {% raw %} {{ui.index}} {% endraw %}</h1>
             <button ng-click="nextSlide()" >Next</button>
           </ion-slide>
 
           <ion-slide ng-controller="slidesCtrl">
-            <h1>Slide Index: {{ui.index}}</h1>
+            <h1>Slide Index: {% raw %} {{ui.index}} {% endraw %}</h1>
             <button ng-click="nextSlide()">Next</button>
           </ion-slide>
 
@@ -69,7 +71,6 @@ iOnSlideBox and ionSlide provides exactly what we needed. It gives us a box that
       </ion-content>
     </ion-pane>
   </body>
-
 {% endhighlight %}
 
 ## Syncing - Three Way Binding
@@ -141,7 +142,7 @@ And then in our html
 {% highlight markup %}
 
 <ion-slide ng-controller="slidesCtrl">
-    <h1>Slide Index: {{ui.index}}</h1>
+    <h1>Slide Index: {% raw %} {{ui.index}} {% endraw %}</h1>
     <button ng-click="nextSlide()" ng-show="presentor">Next</button>
 </ion-slide>
 
