@@ -4,7 +4,7 @@ description: AngularJS examples, recipes & tutorials including directives, bindi
 paginate: 5
 paginate_files: index.html
 permalink: /:year/:month/:title/
-markdown: kramdown
+markdown: maruku
 highlighter: true
 email: info@ng-learn.org
 keywords: angularjs, ng-conf
