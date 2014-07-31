@@ -13,7 +13,7 @@ In the following example, we take advantage of more angular magic. To each strin
 As we get more advanced on our order criteria, we moved from a simple string to an object holding the key value map. 
 Example: {'+name': 'Name: A-Z','-name': 'Name: Z-A'} 
 
-{% highlight html %}
+{% highlight markup %}
 <div>
     <h3>Order By:</h3>
     <select data-ng-model='selectedSortOrder2'

@@ -111,7 +111,7 @@ If you get \"Karma is not a task\" or \"Karma is not found\". Please execute
 
   The business logic is covered. Lets make the changes on the UI. Go to index.html and update the welcome phrase div.
 
-  {% highlight html %}
+  {% highlight markup %}
   Welcome to the AngularJS World, {{"{{fullName"}}}}
   {% endhighlight %}
 

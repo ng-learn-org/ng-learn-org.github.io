@@ -89,91 +89,95 @@ These will be covered in future entries.
 
 ### Setup
 
-    git clone https://github.com/ng-learn-org/workshop.git
-    cd workshop
-    npm install
-    npm install -g bower
-    bower install
+{% highlight bash %}
+git clone https://github.com/ng-learn-org/workshop.git
+cd workshop
+npm install
+npm install -g bower
+bower install
+{% endhighlight %}
 
 In this couple of steps we install all dependencies and our complete tool chain.
 
 ### Step 0 - Setup the AngularJs App
 
-    git checkout -f step-0
+{% highlight bash %}
+git checkout -f step-0
+{% endhighlight %}
 
 - Add AngularJs library to our index.html
 
-    {% highlight html %}
-      <div>Welcome to the AngularJS World</div>
-
-      <script src="bower_components/angular/angular.js"></script>
-
-    </body>
-    {% endhighlight %}
+{% highlight markup %}
+   
+  <div>Welcome to the AngularJS World</div>
+  <script src="bower_components/angular/angular.js"></script>
+</body>
+{% endhighlight %}
 
 - Bootstrap the AngularJS app using the automatic method
 
-    {% highlight html %}
-    <body ng-app>
-    {% endhighlight %}
+{% highlight markup %}
+<body ng-app>
+{% endhighlight %}
 
 - Lets update our welcome message
 
-    {% highlight html %}
-    <div>Welcome to the AngularJS World, {{ "{{userName"}}}}</div>
-    {% endhighlight %}
+{% highlight markup %}
+  <div>Welcome to the AngularJS World, {{ "{{userName"}}}}</div>
+{% endhighlight %}
 
 - Start the app by going to our command line and running
 
-    {% highlight coffeescript%}
-    grunt server
-    {% endhighlight %}
+{% highlight bash %}
+grunt server
+{% endhighlight %}
 
   By running this command, we have just created a small nodejs http server that will serve our application. But Grunt is not part of our scope today. Play along and lets go back to AngularJS.
 
   **Notes:** The application should say \"Welcome to the AngularJS World,\" but the \"{{ "{{userName"}}}}\" portion should not be visible. Angular has kicked in and it does not display it because that variable is not binded to anything, yet!
 
 ### Step 1 - Defining our first module
-
-    git checkout -f step-1
+ 
+{% highlight bash %}
+git checkout -f step-1
+{% endhighlight %}
 
 - Lets name our application
 
-    {% highlight html %}
-    <body ng-app="myStoreApp">
-    {% endhighlight %}
+{% highlight markup %}
+<body ng-app="myStoreApp">
+{% endhighlight %}
 
 - Create app.coffee inside app folder and define our application in app.coffee
 
-    {% highlight coffeescript %}
-    angular.module("myStoreApp", [])
-    {% endhighlight %}
+{% highlight coffeescript %}
+angular.module("myStoreApp", [])
+{% endhighlight %}
 
   **Notes:** Here we define a module named \'myStoreApp\'. The second parameter it is an array of dependencies required for this module.
 
 - Add app.js to our index.html so the browser will load it
 
-    {% highlight html %}
-      <div>Welcome to the AngularJS World</div>
+{% highlight markup %}
+  <div>Welcome to the AngularJS World</div>
+  <script src="bower_components/angular/angular.js"></script>
 
-      <script src="bower_components/angular/angular.js"></script>
-
-      <!-- build:js({.tmp,app}) scripts/scripts.js -->
-      <script src="scripts/app.js"></script>
-      <!-- endbuild -->
-    </body>
-    {% endhighlight %}
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <!-- endbuild -->
+</body>
+{% endhighlight %}
 
   **Notes:** we add our js file wrapped in a \'build comment\' so our toolchain converts it from coffee script to javascript.
 
 - To prove our point, we will add a Run block to our module. Run blocks are the closest thing in Angular to the main method in Java.
   It will be executed after all the dependencies have been injected. Open app.coffee and make the following modification
 
-    {% highlight coffeescript %}
-    angular.module("myStoreApp", []).
-      run ->
-        console.log 'Its alive!'
-    {% endhighlight %}
+{% highlight coffeescript %}
+angular.module("myStoreApp", []).
+  run ->
+    console.log 'Its alive!'
+{% endhighlight %}
 
   Lets run \'grunt server\' in the terminal. This will open a browser with out application. Lets open the developer tools and on the console you should find \"Its alive!\".
   Congratulations. You\'ve created your first Angular module.
@@ -184,10 +188,3 @@ In this couple of steps we install all dependencies and our complete tool chain.
   Patience you must have my young padawan.
   We want to give you time to tune in, provide feedback and point out all our mistakes.
   We will post the second part in 48 hours.
-
-
-
-
-
-
-

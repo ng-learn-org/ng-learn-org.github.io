@@ -9,7 +9,7 @@ One of the features that makes AngularJS standout is the ability to bind the mod
 
 As an example, consider the following snippet of code consisting of two input fields for filtering first and last names, and a list of results.
 
-{% highlight html %}
+{% highlight markup %}
 <div>
     <h2>Filters:</h2>
     Name: <input type="text" ng-model="filters.name"/>

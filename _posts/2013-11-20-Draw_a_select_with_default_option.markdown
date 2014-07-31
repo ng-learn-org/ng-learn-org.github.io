@@ -7,7 +7,7 @@ categories: [beginner]
 
 In the following example, we set a default option for our users to see. We could leave it blank but it would not help our user. We could also preselect one of our options as the default one but sometimes we do not want to influence or dictate our user's selection.
 
-{% highlight html %}
+{% highlight markup %}
 <form name="myForm">
     <select ng-options="color for color in ['red', 'blue', 'yellow']" ng-model="color1">
         <option value="" selected>--Please select your color--</option>

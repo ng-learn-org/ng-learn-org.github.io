@@ -43,7 +43,7 @@ IonicFramework is giving a lot of features out of the box. ionPane, ionHeader,iO
 
 iOnSlideBox and ionSlide provides exactly what we needed. It gives us a box that knows how to slide back and forth when user swipes a finger. It also provides a service to delegate the control to a programatic api which we will take use to generate a 'Next' button. Multi Device slides render app, checked!
 
-{% highlight html %}
+{% highlight markup %}
 
   <body ng-app="demo">
     <ion-pane >
@@ -138,7 +138,7 @@ With that extra parameter in place we could create a boolean in our scope and th
 
 And then in our html
 
-{% highlight html %}
+{% highlight markup %}
 
 <ion-slide ng-controller="slidesCtrl">
     <h1>Slide Index: {{ui.index}}</h1>

@@ -48,7 +48,7 @@ We only care to react when the variable changes.
 
 Our directive should look something like this:
 
-    {% highlight html %}
+    {% highlight markup %}
     <div data-my-slide="showDetails"> details content goes here</div>
     {% endhighlight %}
 
@@ -155,7 +155,7 @@ Now lets write the directive
 
 So now on both productAResults.html and productBResults.html we say
 
-    {% highlight html %}
+    {% highlight markup %}
     <div class="search-details-form" data-my-slide="showRedoSearchDetails">
     {% endhighlight %}
 
