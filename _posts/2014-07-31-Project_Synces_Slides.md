@@ -23,7 +23,7 @@ My first step was doing a very small prototype. Time boxed to 30 minutes. My wif
 Because it is easy enough to create a desktop, ipad, mobile version without extra efforts.
 
 ### Why Firebase?
-Havent you heard? Three way binding!!! Update model on my app and it will be reflected in a Firebase Backend Pool and into whoever else is looking at this same model.
+Haven't you heard? Three way binding!!! Update model on my app and it will be reflected in a Firebase Backend Pool and into whoever else is looking at this same model.
 
 ## Prototype Challenge
 
@@ -44,6 +44,7 @@ IonicFramework is giving a lot of features out of the box. ionPane, ionHeader,iO
 iOnSlideBox and ionSlide provides exactly what we needed. It gives us a box that knows how to slide back and forth when user swipes a finger. It also provides a service to delegate the control to a programatic api which we will take use to generate a 'Next' button. Multi Device slides render app, checked!
 
 {% highlight html %}
+
   <body ng-app="demo">
     <ion-pane >
 
@@ -68,6 +69,7 @@ iOnSlideBox and ionSlide provides exactly what we needed. It gives us a box that
       </ion-content>
     </ion-pane>
   </body>
+
 {% endhighlight %}
 
 ## Syncing - Three Way Binding
@@ -115,6 +117,7 @@ Go through the code comments to understand the logic.
 
 
 })
+
 {% endhighlight %}
 
 ## Presentor vs Audience
@@ -130,6 +133,7 @@ With that extra parameter in place we could create a boolean in our scope and th
 .controller('slidesCtrl', function ($scope, $ionicSlideBoxDelegate, $firebase, $stateParams) {
 
   $scope.presentor = $stateParams.presentor !== undefined
+
 {% endhighlight %}
 
 And then in our html
