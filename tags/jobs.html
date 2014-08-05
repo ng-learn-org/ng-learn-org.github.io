@@ -10,13 +10,13 @@ title: Blog
 </div>
 <div>
 
-    <ul id="filter-container-feature" class="feature">
+    <ul id="filter-container-feature" class="feature sidelist">
         {% for post in site.categories['jobs'] %}
         <li>
             <a href="{{ post.url }}" class="thumb" ><img src="/img/dummies/430x500a.jpg" alt="" /></a>
             <div class="caption"> {{ post.title }} </div>
             <div class="caption">
-                <button type="button" class="btn btn-default btn-block" href="{{ post.url }}" > Apply </button>
+                <a class="btn btn-default btn-block" href="{{ post.url }}" > Apply </a>
             </div>
         </li>
         {% endfor %}
