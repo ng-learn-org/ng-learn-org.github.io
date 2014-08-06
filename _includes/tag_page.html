@@ -1,32 +1,33 @@
 {% for post in site.categories[include.tag] %}
-<!-- article -->
-<article>
-  <header class="post-meta">
-    <h3><a href="{{ post.url }}" rel="bookmark permalink">{{ post.title }}</a></h3>
-    <ul>
-      <li><i class="fa fa-calendar"></i>{{ post.date | date: "%B %d, %Y" }}</li>
-      <li><i class="fa fa-user"></i>{{ post.author}}</li>
-      <li><i class="fa fa-tags"></i>
-        {% for category in post.categories %}
-        <a href="/tags/{{ category }}.html">{{ category | capitalize }}</a>
-        {% if forloop.last == false %},{% endif %}
-        {% endfor %}</li>
-      <li><i class="fa fa-comments"></i><a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a></li>
-    </ul>
-  </header>
-  <div class="content">
-    {% if post.image %}
-    <div class="logo-container">
-      <img src="{{ post.image}}" class="logo"/>
-    </div>
-    {% endif %}
 
-    {{ post.excerpt }}
-  </div>
-  <footer>
-    <a href="{{ post.url }}" class="btn pull-right btn-custom read-more-align">Read More</a>
-  </footer>
+<article itemscope itemtype="http://schema.org/TechArticle">
+    <div class="feature-image">
+        <!--{% if post.image %}-->
+        <!--<div class="logo-container">-->
+             <!--<img src="{{ post.image}}" class="logo"/>-->
+        <!--</div>  -->
+        <!--{% endif %}-->
+        <div class="entry-date"><div class="month">{{ post.date | date: "%b" }}</div><div class="number">{{ post.date | date: "%d" }}</div></div>
+    </div>
+
+    <div class="excerpt">
+        <a href="{{ post.url }}" class="post-heading" >{{ post.title }}</a>
+        {{ post.excerpt }}
+    </div>
+
+    <div class="meta">
+        <span class="user">Author: <a href="#">{{ post.author}},  </a></span>
+            <span class="tags">
+                Tags:
+                {% for category in post.categories %}
+                    <a href="/tags/{{ category }}.html">{{ category | replace:'_',' ' | capitalize }}</a>
+                    {% if forloop.last == false %},{% endif %}
+                {% endfor %},
+            </span>
+        <span class="comments"><a href="{{ site.url }}{{ post.url }}#disqus_thread">comments</a></span>
+    </div>
+
+    <i class="tape"></i>
 </article>
-<hr>
-<!-- /article -->
+
 {% endfor %}

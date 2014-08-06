@@ -1,10 +1,25 @@
 ---
-layout: default
+layout: job
 title: Blog
 ---
 
 <h1>Job Postings</h1>
+<div style="padding: 10px">
+    Post a Job for AngularJS Developers.
+    Send an email to <a href="mailto:info@ng-learn.org?subject=JobPosting">info@ng-learn.org</a>
+</div>
+<div>
 
-{% include job_page.html %}
+    <ul id="filter-container-feature" class="feature sidelist">
+        {% for post in site.categories['jobs'] %}
+        <li>
+            <a href="{{ post.url }}" class="thumb" ><img src="/img/dummies/430x500a.jpg" alt="" /></a>
+            <div class="caption"> {{ post.title }} </div>
+            <div class="caption">
+                <a class="btn btn-default btn-block" href="{{ post.url }}" > Apply </a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
 
-{% include post_jobs.html %}
+</div>

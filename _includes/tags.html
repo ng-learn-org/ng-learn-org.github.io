@@ -1,11 +1,14 @@
-<section class="side-box hidden-xs hidden-sm">
-  <h3>Tags</h3>
-  <ul class="cloud-tag">
-    {% for category in site.categories %}
-    {% assign tag = category[0] %}
-    <li><a href="/tags/{{ tag }}.html">
-        {{ tag | replace:'_',' ' | capitalize }} ({{ site.categories[tag].size }})
-    </a></li>
-    {% endfor %}
-  </ul>
-</section>
+<li class="block" id="tags">
+    <h4 class="heading">Tags</h4>
+    <ul class="sidelist">
+        {% for category in site.categories %}
+        {% assign tag = category[0] %}
+        <li class="cat-item">
+            <a href="/tags/{{ tag }}.html" title="title">
+                {{ tag | replace:'_',' ' | capitalize }} <span class="post-counter">({{ site.categories[tag].size }})</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</li>
+

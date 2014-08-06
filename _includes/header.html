@@ -1,56 +1,42 @@
 <header>
-  <div>
-
-  </div>
-  <nav class="navbar navbar-custom" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- large devices -->
-        <a class="navbar-brand brand visible-md visible-lg" href="/">
-          <img class="navbar-brand-img" src="/img/logo.svg">
-          ng-learn.org
-        </a>
-        
-        <!-- small devices -->
-        <a class="navbar-brand brand visible-sm visible-xs" href="/">
-          <img class="navbar-brand-img" src="/img/logo.svg">
-        </a>
-      </div>
-
-      <div class="collapse navbar-collapse" id="navbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/">Home</a></li>
-          <li><a href="/tags/jobs.html">Jobs</a></li>
-          <li><a href="/tags/angularjs-2.html">AngularJS 2.0</a></li>
-          <li><a href="/tags/workshop.html">Workshop</a></li>
-          <li><a href="/tags/ng-conf.html">NG-CONF</a></li>
-          <li><a href="/tags/news.html">News</a></li>
-          <li class="sm-hidden xs-hidden dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-search"></i></a>
-              <!-- search box -->
-              <div id="search-box" class="dropdown-menu">
-                <form action="/search.html" method="GET">
-                  <div class="input-group">
-                    <input type="text" name="query" class="input-large form-control" placeholder="Search">
-                    <span class="input-group-btn">
-                      <button class="btn" type="submit">Go</button>
-                    </span>
-                  </div>
-                </form>
-              </div>
-              <!-- /search box -->
-              
-          </li>
-        </ul>
-     
-
-      </div>
-
+    <!-- header wrapper -->
+    <div class="wrapper cf">
+        <div id="logo">
+            <!--<a href="/" ><img src="/img/ng-learn-logo.png" alt="" height="135px" style="height: 135px"/></a>-->
+            <img src="/img/ng-learn-100.png" alt=""/>
+        </div>
+        <!--<div class="headline">NG-LEARN</div>-->
     </div>
-  </nav>
+    <!-- ENDS header wrapper -->
+
+    <!-- nav -->
+    <nav class="cf">
+        <div class="wrapper cf">
+            <ul id="nav" class="sf-menu">
+                <li><a href="/">Home<i><b></b></i></a></li>
+                <li><a href="/tags/jobs.html">Jobs<i><b></b></i></a></li>
+                <li><a href="/tags/angularjs-2.html">AngularJS 2.0<i><b></b></i></a></li>
+                <li><a href="/tags/workshop.html">Workshop<i><b></b></i></a></li>
+                <li><a href="/tags/ng-conf.html">NG-CONF<i><b></b></i></a></li>
+                <li><a href="/tags/news.html">News<i><b></b></i></a></li>
+                <!--<li class="sm-hidden xs-hidden dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i><b></b></i></a>-->
+                     <!--search box -->
+                    <!--<div id="search-box" class="dropdown-menu">-->
+                        <!--<form action="/search.html" method="GET">-->
+                            <!--<div class="input-group">-->
+                                <!--<input type="text" name="query" class="input-large form-control" placeholder="Search">-->
+                    <!--<span class="input-group-btn">-->
+                      <!--<button class="btn" type="submit">Go</button>-->
+                    <!--</span>-->
+                            <!--</div>-->
+                        <!--</form>-->
+                    <!--</div>-->
+                     <!--/search box -->
+                <!--</li>-->
+            </ul>
+            <div id="combo-holder"></div>
+        </div>
+    </nav>
+    <!-- ends nav -->
 </header>
