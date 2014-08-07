@@ -196,7 +196,7 @@ px      68    160    252    */
     margin-top: 90px;
   }
   #posts-list article .excerpt .post-heading {
-    max-width: auto;
+    max-width: 100%;
     font-size: 24px;
   }
   #main .page-navigation {
@@ -308,7 +308,7 @@ px      68    160    252    344    436    */
     margin-top: 90px;
   }
   #posts-list article .excerpt .post-heading {
-    max-width: auto;
+    max-width: 100%;
     font-size: 24px;
   }
   /* WIDE MOBILE SIDEBAR ----------------------------------------------------*/#sidebar {

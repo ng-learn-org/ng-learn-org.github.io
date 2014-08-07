@@ -391,7 +391,7 @@ nav {
 /* BLOG ------------------------------------------------------------*/
 #posts-list {
   position: relative;
-  width: 65%;
+  width: 75%;
   float: left;
 }
 #posts-list article {
@@ -443,7 +443,7 @@ nav {
   line-height: 1.1em;
   color: #585246;
   display: block;
-  max-width: 480px;
+  max-width: 85%;
   margin-bottom:20px;
 }
 #posts-list article .meta {
@@ -496,7 +496,7 @@ nav {
 /* SIDEBAR ------------------------------------------------------------*/
 #sidebar {
   position: relative;
-  width: 260px;
+  width: 20%;
   float: right;
   font-size: 14px;
 }
