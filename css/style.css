@@ -70,6 +70,7 @@ body p {
 #main h6 {
   font-family: mensch;
   line-height: 1.3em;
+  margin-top: 10px;
 }
 h1 {
   font-size: 48px;
@@ -99,7 +100,7 @@ header #logo:hover {
 }
 header #logo img {
   display: block;
-  margin: 20px auto;
+  margin: 5px auto;
   /*min-height: 135px;*/
   /*min-width: 147;*/
 }
@@ -195,6 +196,7 @@ nav {
   color: #444;
   font-size: 16px;
   line-height: 1.5em;
+  width:95%;
 }
 /* HEALINE ----------------------------------------------------*/.headline {
   color: white;
@@ -389,7 +391,7 @@ nav {
 /* BLOG ------------------------------------------------------------*/
 #posts-list {
   position: relative;
-  width: 620px;
+  width: 65%;
   float: left;
 }
 #posts-list article {
@@ -442,6 +444,7 @@ nav {
   color: #585246;
   display: block;
   max-width: 480px;
+  margin-bottom:20px;
 }
 #posts-list article .meta {
   display: block;
