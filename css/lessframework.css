@@ -203,7 +203,7 @@ px      68    160    252    */
     text-indent: -9000px;
   }
   #main .page-navigation div {
-    width: 25px;
+  /*  width: 25px;*/
   }
   /* MOBILE SIDEBAR ----------------------------------------------------*/#sidebar {
     width: 260px;
