@@ -5,7 +5,7 @@ author: Bluescreen
 categories: [tips]
 ---
 
-[Jasmine][1] is a great testing framework but when you have to deal with promises is not always clear how to deal with promises. Typical use cases are asynchronous services calling a backend. For instance, consider the following AngularJS service.
+[Jasmine][1] is a great testing framework but when you have to deal with promises is not always clear how. Typical use cases are asynchronous services calls to a backend. For instance, consider the following service:
 
 {% highlight javascript %}
 angular.module('myApp').service('EmployeeService',
@@ -19,9 +19,11 @@ angular.module('myApp').service('EmployeeService',
 );
 {% endhighlight %}
 
-Upon calling ``EmployeeService.get()`` it will return a promise that will be either fulfilled or rejected. Testing a promise without the necessary guards can lead to two different scenarios. First scenario we get a deferred pass or fail when running our test suite, this can make difficult to trace failed tests. The second possibility and more dangerous, our test suite finishes before the promise is completed hiding passes and failures under the rag.
+Calling ``EmployeeService.get()`` returns a promise that will be either fulfilled or rejected. Testing a promise without the necessary guards can lead to two different scenarios.
 
-Since Jasmine 2.0, test methods can be supplied with an special function called ``done`` that will signal the test runner to wait until that function is invoked. Here is a sample test case for the previously defined service.
+First we get a deferred pass or fail when running our test suite, this can make tracing failed tests very difficult. Second possibility and more dangerous one, our test suite finishes before the promise is completed hiding passes and failures under the rag.
+
+Since Jasmine 2.0, test methods can be supplied with an special function called ``done``. The test runner will wait until this function is called before moving to the next test, it also sets a watchdog in case it is never called.
 
 {% highlight javascript %}
 describe('EmployeeService', function() {
@@ -57,5 +59,7 @@ describe('EmployeeService', function() {
 {% endhighlight %}
 
 In this case ``http.flush()`` will also force the test runner to wait before the promise is completed. But this is a particularity of ``$httpBackend``, it is generally safer to use ``done()``.
+
+The other particularity is that we also created a ``failTest`` function that upon invocation will signal a test failure, without this, if for any reason the promise is broken our test will silently pass. 
 
 [1]: http://jasmine.github.io/
