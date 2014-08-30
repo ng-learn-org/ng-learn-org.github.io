@@ -10,8 +10,9 @@ categories: [tips]
 {% highlight javascript %}
 angular.module("myApp.store").controller("StoresCtrl", function($scope, StoreService, Contact) {
   StoreService.listStores().then(function(branches) {
-    Contact.retrieveContactInfo().then(function(userInfo) {});  
+    Contact.retrieveContactInfo().then(function(userInfo) {
         //more code here crossing user and stores data
+    });  
   });
 });
 {% endhighlight %}
