@@ -19,7 +19,7 @@ angular.module("myApp.store").controller("StoresCtrl", function($scope, StoreSer
 Lets see how to test these two promises with the help of $provide to create fake implementations of our 
 dependencies and jasmine's spies to fake results and be informed when a function was called.
 
-Go through the code's comments to understand how to utilize these two concepts.
+Follow the code's comments to understand how to utilize these two concepts.
 
 
 {% highlight javascript %}
@@ -57,7 +57,8 @@ describe("Store Controller", function() {
   
   beforeEach(function() {
   
-    // When Angular Injects the StoreService and Contact dependencies, it will use the implementation we provided above
+    // When Angular Injects the StoreService and Contact dependencies, 
+    // it will use the implementation we provided above
     inject(function($controller, $rootScope, _StoreService_, _Contact_) {
       scope = $rootScope.$new();
       StoreService = _StoreService_;
