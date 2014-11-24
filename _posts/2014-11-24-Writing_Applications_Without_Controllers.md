@@ -5,12 +5,12 @@ author: Santiago Esteva
 categories: [directives]
 ---
 
-How about creating applications without controllers? is MVC always the best design?
+How about creating applications without controllers?
 How about writing independent modular features?
 
 When you start learning angularJS you go over the docs and tutorials. This is a perfect sandbox.
 You are just learning so there are really no complexities and you dont have to worry about what happens when your application gets massive.
-If you are actually coding a small site, then you are safe, you may stick to MVC and everything will be fine. You can stop reading now...go have a beer and enjoy life! you lucky!
+If you are actually coding a small site, then you are safe, you may stick to the classical MVC approach and everything will be fine. You can stop reading now...go have a beer and enjoy life! you lucky!
 
 On the contrary, if your application gets massive, if your team gets bigger than 3, if your team is split between remote locations, if those locations dont share the same timezone....
 well you get the idea...if life is not that easy, then lets start looking at some options.
@@ -214,7 +214,7 @@ You may find a more complex scenario to solve with a different mechanism such as
 
 You may also want to provide your own cacheFactory.
 
-You can read more about it at the [angularJS Docs][2] and here is an extract of the ng-book [we recommend:][1]
+You can read more about it at the [angularJS Docs][2] and [here:][1] is an extract of the ng-book we recommend
 
 
 [1]:https://www.ng-book.com/p/Caching/
