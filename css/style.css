@@ -738,5 +738,11 @@ div.pocket-btn {
 }
 
 /* /social */
+strong {
+  font-weight: bold;
+}
 
+em {
+  font-style: italic;
+}
 
