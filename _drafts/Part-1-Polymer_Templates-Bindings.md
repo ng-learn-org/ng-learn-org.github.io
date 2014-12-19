@@ -185,6 +185,28 @@ Bindings inside the template are evaluated in the context of the bound object.
 **Note:** In order for the context binding to work on Polymer I had to nest a template inside the element's template.
 You will notice this pattern as we use more TemplateBinding features inside Polymer.
 
+You can also create a named scope. This comes useful if you have nested templates.
+
+{% highlight markup %}
+
+<polymer-element name="my-element">
+  <template>
+    <template bind="{% raw %}{{ options as o }}{% endraw %}">
+      <p>My favorite color is {% raw %}{{o.color}}{% endraw %}.</p>
+    <template>
+  </template>
+  <script>
+    Polymer({
+      created: function(){
+        this.options = {
+          color: 'red'
+        }
+      }
+    });
+  </script>
+</polymer-element>
+{% endhighlight %}
+
 ## Try it yourself
 You should go to [ele.io][11] and take any of the Polymer examples and play!
 
