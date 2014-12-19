@@ -10,9 +10,8 @@ by enabling it to create, manage, and remove instances of content bound to data 
 Although internal in Polymer, it is also useful standalone.
 
 In our previous article we presented a new challenge [Will Polymer kill Angular 2.0?][8].
-We also said that in order to choose one over any other , we needed to know its strength and weakness.
-We came up with a list of small challenges to cover.
-Templates are the first one with no particular reason. Visit our [previous post][8] to see the whole list.
+We also said that in order to choose one over any other, we needed to know its strength and weakness and finally we came up with a list of small challenges to cover.
+Templates are the first one for no particular reason and if you want to can see the whole list in our [previous post][8].
 
 So Polymer team created a standalone small library called ['TemplateBinding'][9].
 This lib stands on [HTML Template Element][10] spec's shoulders providing binding, interpolation and some logic helpers.
@@ -45,7 +44,7 @@ Then we will go into a third article on binding on native html elements, multipl
 
 {% endhighlight %}
 
-**Note:** TemplateBinding depends on NodeBind which depends on observe-js.
+**Note:** TemplateBinding depends on NodeBind which depends on observe.js.
 TemplateBinding.js uses Platform.performMicrotaskCheckpoint() which is defined in observe.js
 
 ### Polymer Version
