@@ -11,7 +11,7 @@ Although internal in Polymer, it is also useful standalone."
 
 In our previous article we presented a new challenge [Will Polymer kill Angular 2.0?][8].
 We also said that in order to choose one over any other, we needed to know its strength and weakness and finally we came up with a list of small challenges to cover.
-Templates are the first one for no particular reason and if you want to can see the whole list in our [previous post][8].
+Templates are the first one for no particular reason and if you want to read the whole list, checkout our [previous post][8].
 
 ## About HTML template element
 
