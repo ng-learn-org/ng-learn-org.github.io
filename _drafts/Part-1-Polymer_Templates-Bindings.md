@@ -65,7 +65,7 @@ TemplateBinding.js uses Platform.performMicrotaskCheckpoint() which is defined i
 {% endhighlight %}
 
 **Note:** A few features of native templates can’t be replicated perfectly with the polyfill library, and require some workarounds.
-Binding to certain attributes (such as the <img> tag’s src attribute) doesn’t work correctly on some browsers that don’t support templates.
+Binding to certain attributes (such as the img tag’s src attribute) doesn’t work correctly on some browsers that don’t support templates.
 
 For example, running
 
