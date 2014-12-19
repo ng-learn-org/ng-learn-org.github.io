@@ -17,8 +17,17 @@ So Polymer team created a standalone small library called ['TemplateBinding'][9]
 This lib stands on [HTML Template Element][10] spec's shoulders providing binding, interpolation and some logic helpers.
 Lets take a look at these added features.
 
-We'll start with 'bindings' in this article. Next one will be on some logic features such as repeat and conditions.
+We'll start with 'bindings'.
+In this article we will try to gather facts, problems workarounds and tips I've found on from polymer's docs, articles about html templates spec and different code repos I've found.
+
+Next one will be on some logic features such as repeat and conditions.
 Then we will go into a third article on binding on native html elements, multiple insertion points and one way binding.
+
+## About templates
+
+- Its content is effectively inert until activated. Essentially, your markup is hidden DOM and does not render.
+- Any content within a template won't have side effects. Script doesn't run, images don't load, audio doesn't play,...until the template is used.
+- Content is considered not to be in the document. Using document.getElementById() or querySelector() in the main page won't return child nodes of a template.
 
 ## Binding to a property
 
@@ -216,7 +225,6 @@ Next article will be on logic features such as repeat and conditions.
 Then we will go into a third article on binding on native html elements, multiple insertion points and one way binding.
 
 Enjoy!
-
 
 
 [1]:http://webcomponents.org/
