@@ -65,7 +65,7 @@ categories: [polymer]
 
 
 ## Try it yourself
-You got [ele.io][11] and take any of the Polymer examples and play!
+You should go to [ele.io][11] and take any of the Polymer examples and play!
 
 Ele.io is the jsfiddle for polymer, created for polymer playing and developed with polymer elements.
 Enjoy!

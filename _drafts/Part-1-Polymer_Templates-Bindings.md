@@ -187,7 +187,7 @@ Bindings inside the template are evaluated in the context of the bound object.
 You will notice this pattern as we use more TemplateBinding features inside Polymer.
 
 ## Try it yourself
-You got [ele.io][11] and take any of the Polymer examples and play!
+You should go to [ele.io][11] and take any of the Polymer examples and play!
 
 Ele.io is the jsfiddle for polymer, created for polymer playing and developed with polymer elements.
 
