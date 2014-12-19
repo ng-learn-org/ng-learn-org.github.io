@@ -5,9 +5,9 @@ author: Santiago Esteva
 categories: [polymer]
 ---
 
-Polymer’s TemplateBinding library extends the capabilities of the HTML Template Element
+"Polymer’s TemplateBinding library extends the capabilities of the HTML Template Element
 by enabling it to create, manage, and remove instances of content bound to data defined in JavaScript.
-Although internal in Polymer, it is also useful standalone.
+Although internal in Polymer, it is also useful standalone."
 
 In our previous article we presented a new challenge [Will Polymer kill Angular 2.0?][8].
 We also said that in order to choose one over any other, we needed to know its strength and weakness and finally we came up with a list of small challenges to cover.
