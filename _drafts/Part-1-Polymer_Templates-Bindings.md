@@ -44,8 +44,8 @@ Then we will go into a third article on binding on native html elements, multipl
 
 {% endhighlight %}
 
-**Note:** TemplateBinding depends on NodeBind which depends on observe.js.
-TemplateBinding.js uses Platform.performMicrotaskCheckpoint() which is defined in observe.js
+**Note:** TemplateBinding depends on NodeBind which depends on observe-js.
+TemplateBinding.js uses Platform.performMicrotaskCheckpoint() which is defined in observe-js
 
 ### Polymer Version
 
