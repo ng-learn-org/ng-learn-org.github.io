@@ -11,6 +11,10 @@ If you would like to review bindings to a property, a complex object or a specif
 By now you got the idea and differences between TemplateBinding and Polymer.
 From this point onwards I will just add the Polymer's version.
 
+**knowledge revision:** in our [previous article][12] we talked about Bindings. The native template element does not provide bindings capabilities.
+This is one if those the enhanced features provided by [TemplateBinding][9] library created by the Polymer team.
+This library is used by Polymer under the hood but it could be used as standalone.
+
 
 ## Repeating Templates
 
@@ -251,6 +255,8 @@ You can also use it to easily represent tree structures with a recursive templat
 
 This is simplistic example on how you could dynamically decide which template to display based on a given logic.
 
+We give each template a unique id but instead of reference one or the other, we bind the selection to our model.
+
 {% highlight markup %}
 <polymer-element name="my-element">
   <template >
@@ -267,7 +273,7 @@ This is simplistic example on how you could dynamically decide which template to
       created: function(){
         this.user = { name: 'Amy'};
       },
-     attached: function(){
+      domReady: function(){
        this.templateName = 'two';
        if(this.user.hasOwnProperty('username')){
          this.templateName = 'one';
@@ -278,6 +284,15 @@ This is simplistic example on how you could dynamically decide which template to
 </polymer-element>
 {% endhighlight %}
 
+**Created vs Attached vs DomReady:** Polymer shortens web components lifecycle callbacks. Created - from createdCallback - is called when an instance of the element was created.
+Here we can instantiate our Model.
+
+In this example, I wanted to choose the templates dynamically based on an existing model. So I decided to perform my logic in a
+later stage. I could have picked 'attached' - from attachedCallback - which is called when an instance of the element was inserted into the DOM.
+
+I chose 'domReady' which is called when the element’s initial set of children exist. From the docs: "This is an appropriate time to poke at the element’s parent
+or light DOM children. Another use is when you have sibling custom elements (e.g. they’re .innerHTML‘d together, at the same time).
+Before element A can use B’s API/properties, element B needs to be upgraded. The domReady callback ensures both elements exist."
 
 
 ## Try it yourself

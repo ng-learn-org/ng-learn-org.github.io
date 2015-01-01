@@ -5,19 +5,32 @@ author: Santiago Esteva
 categories: [polymer]
 ---
 
-Polymer’s TemplateBinding library extends the capabilities of the HTML Template Element
+"Polymer’s TemplateBinding library extends the capabilities of the HTML Template Element
 by enabling it to create, manage, and remove instances of content bound to data defined in JavaScript.
-Although internal in Polymer, it is also useful standalone.
+Although internal in Polymer, it is also useful standalone."
 
 In our previous article we presented a new challenge [Will Polymer kill Angular 2.0?][8].
 We also said that in order to choose one over any other, we needed to know its strength and weakness and finally we came up with a list of small challenges to cover.
-Templates are the first one for no particular reason and if you want to can see the whole list in our [previous post][8].
+Templates are the first one for no particular reason and if you want to read the whole list, checkout our [previous post][8].
+
+## About HTML template element
+
+1. Its content is effectively inert until activated. Essentially, your markup is hidden DOM and does not render.
+
+2. Any content within a template won't have side effects. Script doesn't run, images don't load, audio doesn't play,...until the template is used.
+
+3. Content is considered not to be in the document. Using document.getElementById() or querySelector() in the main page won't return child nodes of a template.
+
+## About Polymer templates
 
 So Polymer team created a standalone small library called ['TemplateBinding'][9].
 This lib stands on [HTML Template Element][10] spec's shoulders providing binding, interpolation and some logic helpers.
 Lets take a look at these added features.
 
-We'll start with 'bindings' in this article. Next one will be on some logic features such as repeat and conditions.
+We'll start with 'bindings'.
+In this article we will try to gather facts, problems workarounds and tips I've found on from polymer's docs, articles about html templates spec and different code repos.
+
+Next one will be on some logic features such as repeat and conditions.
 Then we will go into a third article on binding on native html elements, multiple insertion points and one way binding.
 
 ## Binding to a property
@@ -44,8 +57,8 @@ Then we will go into a third article on binding on native html elements, multipl
 
 {% endhighlight %}
 
-**Note:** TemplateBinding depends on NodeBind which depends on observe.js.
-TemplateBinding.js uses Platform.performMicrotaskCheckpoint() which is defined in observe.js
+**Note:** TemplateBinding depends on NodeBind which depends on observe-js.
+TemplateBinding.js uses Platform.performMicrotaskCheckpoint() which is defined in observe-js
 
 ### Polymer Version
 
@@ -216,7 +229,6 @@ Next article will be on logic features such as repeat and conditions.
 Then we will go into a third article on binding on native html elements, multiple insertion points and one way binding.
 
 Enjoy!
-
 
 
 [1]:http://webcomponents.org/
