@@ -1,4 +1,9 @@
-First Look at Angular2
+---
+layout: post
+title: First Look at Angular2
+author: Santiago Esteva
+categories: [angularjs-2]
+---
 
 Better? Worst? More simple? complex?
 Lets look at a first application created with a first draft version of Angular2 + Firebase and its change detection.
