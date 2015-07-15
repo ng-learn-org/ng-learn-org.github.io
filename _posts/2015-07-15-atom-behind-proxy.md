@@ -16,10 +16,8 @@ back and coming for more!
 Here is a quick tip for those dealing with a proxy. This is applicable to
 windows, mac and windows.
 
-
       apm config set proxy "http://localhost:3128"
       apm config set https_proxy proxy "http://localhost:3128"
-
 
 Now open Atom and you will be able to install packages!
 
