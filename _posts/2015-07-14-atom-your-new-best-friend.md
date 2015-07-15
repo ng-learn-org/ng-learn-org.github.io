@@ -11,14 +11,14 @@ I saw a lot of resemblances between Atom and Emacs. They are both open source, e
 
 I decided to give it a try and discovered that it took me maybe two days to feel at home in Atom. I found myself very productive very soon, plus I discovered that a lot of the functionality I've written over the years for Emacs where there already. In short here are some of my reasons for making the switch:
 
-* Javascript is easier for me to hack than lisp
-* Modern UI. Granted Emacs was born as a console editor therefore lacks all the glitter
-* Fonts render better (this is very important if you spend a sizable amount of your day in the editor)
-* Lots, and I mean [lots of packages][3] and very active development
-* CUA mode works as expected in all conditions
-* Search for files and folders is awesome
-* Great support for all modern languages
-* Plenty more!
+  * Javascript is easier for me to hack than lisp
+  * Modern UI. Granted Emacs was born as a console editor therefore lacks all the glitter
+  * Fonts render better (this is very important if you spend a sizable amount of your day in the editor)
+  * Lots, and I mean [lots of packages][3] and very active development
+  * CUA mode works as expected in all conditions
+  * Search for files and folders is awesome
+  * Great support for all modern languages
+  * Plenty more!
 
 Don't get me wrong, I still miss some of the features that Emacs has but I think Atom is the future.
 
