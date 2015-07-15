@@ -24,8 +24,6 @@ Don't get me wrong, I still miss some of the features that Emacs has but I think
 
 Let me know what you think in the comments section.
 
-https://atom.io/packages
-
 [1]: https://code.facebook.com/posts/397706937084869
 [2]: https://atom.io/
 [3]: https://atom.io/packages
