@@ -1,4 +1,4 @@
 AngularJS.info site
 ===================
 
-sudo bundle exec jekyll serve^C
+sudo bundle exec jekyll serve
