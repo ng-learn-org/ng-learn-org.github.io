@@ -91,7 +91,7 @@ In addition, browsers such as IE sanitize certain attributes, disallowing {% raw
 
 To avoid these side effects, bindings in certain attributes can be prefixed with “_”:
 
-{% highlight  markup%}
+{% highlight html%}
 <img _src="/users/{% raw %}{{id}}{% endraw %}.jpg">
 <div _style="color: {{color}}">
 <a _href="{% raw %}{{url}}{% endraw %}">Link</a>

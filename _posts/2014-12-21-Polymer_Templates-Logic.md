@@ -81,7 +81,7 @@ You can use the iteration index like any other variable using double mustache sy
 Some browsers don’t allow 'template' elements inside certain elements like 'select' or 'table'.
 Browsers with native support for 'template' allow it to be a child of elements 'select' and 'table'.
 
-{% highlight  markup%}
+{% highlight html%}
 <table>
   <template repeat="{% raw %}{{fruit in fruits}{% endraw %}">
     <tr><td>{% raw %}{{fruit}}{% endraw %}</td></tr>
@@ -91,7 +91,7 @@ Browsers with native support for 'template' allow it to be a child of elements '
 
 Here is the workaround
 
-{% highlight  markup%}
+{% highlight html%}
 <tr template repeat="{% raw %}{{fruit in fruits}}{% endraw %}">
     <td>{% raw %}{{fruit}}{% endraw %}</td>
 </tr>
@@ -153,7 +153,7 @@ Here is how it looks in a polymer element:
 
 You may also use to condition whether to repeat a template or not.
 
-{% highlight  markup%}
+{% highlight html%}
 <template repeat if="{% raw %}{{ conditionalValue }}{% endraw %}">
   Repeat if and only if conditionalValue is truthy.
 </template>
