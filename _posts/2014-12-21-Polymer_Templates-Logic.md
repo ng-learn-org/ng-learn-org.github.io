@@ -20,7 +20,7 @@ This library is used by Polymer under the hood but it could be used as standalon
 
 Repeat in Polymer has two possible formats: tacit or named scope. The tacit form looks like this:
 
-{% highlight markup %}
+{% highlight html %}
 
 <polymer-element name="my-element">
   <template>
@@ -46,7 +46,7 @@ Repeat in Polymer has two possible formats: tacit or named scope. The tacit form
 
 The named scope form is:
 
-{% highlight markup %}
+{% highlight html %}
 
 <polymer-element name="my-element">
   <template>
@@ -71,7 +71,7 @@ The named scope form is:
 Sometimes you need the the iteration Index.
 You can use the iteration index like any other variable using double mustache syntax:
 
-{% highlight markup %}
+{% highlight html %}
 <template repeat="{% raw %}{{fruit, i in fruits}}{% endraw %}">
   <div>{% raw %}{{i + 1}}{% endraw %}. {% raw %}{{fruit}}{% endraw %}</div>
 </template>
@@ -102,7 +102,7 @@ Here is the workaround
 
 You can use 'bind if' or 'if':
 
-{% highlight markup %}
+{% highlight html %}
 <template bind if="{{ conditionalValue }}">
   Binds if and only if conditionalValue is truthy.
 </template>
@@ -114,7 +114,7 @@ You can use 'bind if' or 'if':
 
 Polymer has no `else` clause. Use a negative condition instead:
 
-{% highlight markup %}
+{% highlight html %}
 <template if="{% raw %}{{!showAnswer}}{% endraw %}">
   ...
 </template>
@@ -122,7 +122,7 @@ Polymer has no `else` clause. Use a negative condition instead:
 
 Here is how it looks in a polymer element:
 
-{% highlight markup %}
+{% highlight html %}
 <polymer-element name="my-element">
   <template>
     <template if="{% raw %}{{showAnswer}}{% endraw %}">
@@ -165,7 +165,7 @@ This is another form of condition using **?=** syntax. Let's see an example:
 
 You can set an element's `hidden` property using `hidden?=`:
 
-{% highlight markup %}
+{% highlight html %}
 <p hidden?="{% raw %}{{shortView}}{% endraw %}">
   ...
 </p>
@@ -173,7 +173,7 @@ You can set an element's `hidden` property using `hidden?=`:
 
 The boolean attribute gets set if it is bound to a `true` value. Note the use of `?=` syntax for conditionally setting a boolean attribute.
 
-{% highlight markup %}
+{% highlight html %}
 <polymer-element name="my-element">
   <template>
    <div>The Big Lebowski</div>
@@ -201,7 +201,7 @@ When creating an instance, the content of this template will be ignored, and the
 In the following example, the text 'Used by any template which refers to this one by the ref attribute' will be printed twice.
 
 
-{% highlight markup %}
+{% highlight html %}
 <polymer-element name="my-element">
   <template>
     <template id="user">
@@ -237,7 +237,7 @@ In the following example, the text 'Used by any template which refers to this on
 
 You can also use it to easily represent tree structures with a recursive template:
 
-{% highlight markup %}
+{% highlight html %}
 <template>
   <template>
     <ul>
@@ -257,7 +257,7 @@ This is simplistic example on how you could dynamically decide which template to
 
 We give each template a unique id but instead of reference one or the other, we bind the selection to our model.
 
-{% highlight markup %}
+{% highlight html %}
 <polymer-element name="my-element">
   <template >
     <template id="one">

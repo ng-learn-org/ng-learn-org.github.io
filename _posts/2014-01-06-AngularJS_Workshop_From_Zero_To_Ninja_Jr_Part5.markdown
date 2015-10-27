@@ -162,7 +162,7 @@ If you get \"Karma is not a task\" or "Karma is not found". Please execute
 
    In our login.html we will give the control to our loginController and attach our submit function to out Login button.
 
-    {% highlight markup %}
+    {% highlight html %}
     <div ng-controller="loginController">
         <h1>Login</h1>
         <form>

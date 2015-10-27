@@ -59,7 +59,7 @@ But....the api does not provide an elegant way of cleaning the cache.
 
 I created a small prototype. You can check it out at [my github repo][3]
 
-{% highlight markup %}
+{% highlight html %}
 
 <div class="jumbotron">
   <my-menu></my-menu>

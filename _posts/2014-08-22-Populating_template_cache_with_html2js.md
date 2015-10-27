@@ -87,7 +87,7 @@ grunt.registerTask('build', [
 
 Now we need to add ``scripts/populate_template_cache.js`` in our ``index.html``
 
-{% highlight markup %}
+{% highlight html %}
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/populate_template_cache.js"></script>
 <script src="scripts/app.js"></script>

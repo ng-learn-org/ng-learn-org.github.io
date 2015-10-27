@@ -13,7 +13,7 @@ In this article, we'll cover out of the box validations and unit testing/creatin
 
 Lets see a first simple example where we take advantage of out of the box validations.
 
-{% highlight markup %}
+{% highlight html %}
 
     <body data-ng-app="myApp" data-ng-controller="searchCtrl">
 
@@ -81,7 +81,7 @@ This is what is going on...
 
 Lets take a look at the different errors we listed.
 
-{% highlight markup %}
+{% highlight html %}
 
         <div class="errors">
           <ul data-ng-show="searchForm.submitted">
@@ -224,7 +224,7 @@ If you would like to play/see with the unit test, launch this demo.
 Now that we have a working/tested directive for our custom validation, its time we apply it to our html.
 The first step is to add it to our input.
 
-{% highlight markup %}
+{% highlight html %}
 
         <input type="text" placeholder="City or airport" id="leaving_from" name="leaving_from"
                 data-ng-model="search.leavingFrom" required data-ng-minlength="3"
@@ -236,7 +236,7 @@ The first step is to add it to our input.
 And then we add our error message to the errors' list.
 
 
-{% highlight markup %}
+{% highlight html %}
 
         <div class="errors">
           <!-- We use submitted to hide all error msgs until its actually submitted-->

@@ -46,7 +46,7 @@ It gives us a box that knows how to slide back and forth when user swipes a fing
 It also provides a service to delegate the control to a programatic api which we will take use to generate a 'Next' button.
 Multi Device slides render app, checked!
 
-{% highlight markup %}
+{% highlight html %}
   <body ng-app="demo">
     <ion-pane >
 
@@ -139,7 +139,7 @@ With that extra parameter in place we could create a boolean in our scope and th
 
 And then in our html
 
-{% highlight markup %}
+{% highlight html %}
 
 <ion-slide ng-controller="slidesCtrl">
     <h1>Slide Index: {% raw %} {{ui.index}} {% endraw %}</h1>

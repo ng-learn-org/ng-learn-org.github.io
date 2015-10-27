@@ -10,7 +10,7 @@ Now it's time to refactor our directive by removing the pages fixed amount limit
 
 Just to recap, below is the directive we did:
 
-{% highlight markup %}
+{% highlight html %}
 <div data-my-progress-bar="{{"{{pageIndex"}}}}" data-currentPageStyle="active">
   <span>Select Product</span>
   <span>Shipping Info</span>
@@ -28,7 +28,7 @@ Just to recap, below is the directive we did:
 Even though we add more span/pages in the above HTML, our directive doesn't consider them since the switch block's logic is only covering the first four "span" elements.
 Let's consider the following:
 
-{% highlight markup %}
+{% highlight html %}
 <div data-my-progress-bar="5" data-currentPageStyle="active">
    <span>Select Product</span>
    <span>Shipping Info</span>
@@ -80,7 +80,7 @@ The "active" class would never be assigned to any "span" element beyond the fort
 We said we were going to show you a more flexible way of coding this directive. This way actually involves having a non-fixed number of pages. Taking advantage of this change, we\'re going to code this directive in a slighty different way.
 
 Our new directive should look like:
-{% highlight markup %}
+{% highlight html %}
 <div data-my-progress-bar
      data-currentpage="{{"{{pageIndex"}}}}" 
      data-currentpagestyle="active" 
@@ -196,7 +196,7 @@ Having finished writting the tests, it\'s now time to write the new directive co
 
 Let's have a look at the "myTemplate.html" file:
 
-{% highlight markup %}
+{% highlight html %}
 <span ng-repeat="page in allPages"
     {% raw %} ng-class="{ {{cssActivePage}}: $index == indexActivePage}">{{page}} {% endraw %}
 </span>
@@ -205,7 +205,7 @@ Let's have a look at the "myTemplate.html" file:
 
 So now each html has:
 
-{% highlight markup %}
+{% highlight html %}
 
 <div class="breadcrumb">
   <div data-my-progress-bar

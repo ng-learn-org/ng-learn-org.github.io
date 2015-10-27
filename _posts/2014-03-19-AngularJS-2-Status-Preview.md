@@ -172,7 +172,7 @@ in the design doc and it is of value for any web developer. There is a special d
 The team has a first example using ShadowDom and they are currently working on bindings.
 Here is an indication on how a very simple directive could look like:
 
-        {% highlight markup %}
+        {% highlight html %}
         <exp-hello></exp-hello>
         {% endhighlight %}
 
@@ -187,7 +187,7 @@ If you would like to look at the source code, follow this <a href="https://githu
 
 And here is candidate usage of one way binding.
 
-        {% highlight markup %}
+        {% highlight html %}
         {% raw %} {{:foo}} {% endraw %}
         {% endhighlight %}
 

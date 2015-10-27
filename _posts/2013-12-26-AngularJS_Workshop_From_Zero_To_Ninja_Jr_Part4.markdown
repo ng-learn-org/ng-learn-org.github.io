@@ -104,7 +104,7 @@ AC 1 seems to require a change on the flow. We need to add another test to our t
 
  - **Development Flow - Coding:**  Adding an H1 tag (with the "Login" text) in our index.html would be enough to make this test go green. Since we are already there, lets add a small form requesting a username and password.
 
- {% highlight markup %}
+ {% highlight html %}
  <div>
      <h1>Login</h1>
      <form>
@@ -128,7 +128,7 @@ AC 1 seems to require a change on the flow. We need to add another test to our t
 
  - **Step 1:** In our index.html we will add a container for our views.
 
- {% highlight markup %}
+ {% highlight html %}
   <div ng-view></div>
  {% endhighlight %}
 

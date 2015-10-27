@@ -15,7 +15,7 @@ that provides the user a much better experience.
 
 Based on [Part 3][3] we could actually reuse our component N times like this:
 
-{% highlight markup %}
+{% highlight html %}
 
 <div data-my-birth-date data-my-validate-birth-date data-ng-model="pax1.dateOfBirth"></div>
 <div data-my-birth-date data-my-validate-birth-date data-ng-model="pax2.dateOfBirth"></div>
@@ -104,7 +104,7 @@ Beautiful! Now that we have a green suite of tests again, lets update our html c
 
 First we can update our form to display N times our component.
 
-{% highlight markup %}
+{% highlight html %}
 
 <div data-my-birth-date data-my-validate-birth-date data-ng-model="pax1.dateOfBirth"></div>
 <div data-my-birth-date data-my-validate-birth-date data-ng-model="pax2.dateOfBirth"></div>
@@ -113,7 +113,7 @@ First we can update our form to display N times our component.
 
 And now we update our errors section:
 
-{% highlight markup %}
+{% highlight html %}
 
     <div class="errors">
       <!-- We use submitted to hide all error msgs until its actually submitted-->
@@ -148,7 +148,7 @@ Lets disregard my inability to make smart jokes and refactor this once again.
 
 Lets assume our application already has a list of passengers. So now we want to say something like:
 
-{% highlight markup %}
+{% highlight html %}
     <div data-ng-repeat="pax in passengers track by $index">
     Pax - {% raw %}{{pax.name}}{% endraw %}:
     <div data-my-birth-date data-my-validate-birth-date data-ng-model="pax.dateOfBirth"></div>
@@ -260,7 +260,7 @@ Now lets update our form just like we stated at the beginning of this step and a
 
 **Note** that since we are inside a new scope we need to access the index by calling $parent.
 
-{% highlight markup %}
+{% highlight html %}
 
 <div data-ng-repeat="pax in passengers track by $index">
     Pax - {% raw %}{{pax.name}}{% endraw %}:
@@ -273,7 +273,7 @@ Finally, we get to update our errors section and deliver more value to our devot
 
 Before:
 
-{% highlight markup %}
+{% highlight html %}
 
 <li data-ng-show="searchForm.$error.pax1_dateOfBirth_incomplete">Pax 1: Incomplete Date of Birth</li>
 <li data-ng-show="searchForm.$error.pax1_dateOfBirth_invalid">Pax 1:Invalid Date of Birth</li>
@@ -289,7 +289,7 @@ Before:
 
 After:
 
-{% highlight markup %}
+{% highlight html %}
 
 <div data-ng-repeat="pax in passengers track by $index">
   {% raw %}

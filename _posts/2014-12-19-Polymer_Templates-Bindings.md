@@ -37,7 +37,7 @@ Then we will go into a third article on binding on native html elements, multipl
 
 ### Standalone TemplateBinding Version
 
-{% highlight markup %}
+{% highlight html %}
 
 <template id="text">
   <p>My favorite color is {% raw %}{{color}}{% endraw %}.</p>
@@ -62,7 +62,7 @@ TemplateBinding.js uses Platform.performMicrotaskCheckpoint() which is defined i
 
 ### Polymer Version
 
-{% highlight markup %}
+{% highlight html %}
 
 <polymer-element name="my-element">
   <template>
@@ -81,7 +81,7 @@ Binding to certain attributes (such as the img tag’s src attribute) doesn’t 
 
 For example, running
 
-{% highlight markup %}
+{% highlight html %}
 <img src="/users/{% raw %}{{id}}{% endraw %}.jpg">
 {% endhighlight %}
 
@@ -103,7 +103,7 @@ To avoid these side effects, bindings in certain attributes can be prefixed with
 
 ### Standalone TemplateBinding Version
 
-{% highlight markup %}
+{% highlight html %}
 
 <template id="text">
   <p>My favorite color is {% raw %}{{options.color}}{% endraw %}.</p>
@@ -125,7 +125,7 @@ To avoid these side effects, bindings in certain attributes can be prefixed with
 
 ### Polymer Version
 
-{% highlight markup %}
+{% highlight html %}
 
 <polymer-element name="my-element">
   <template>
@@ -153,7 +153,7 @@ Bindings inside the template are evaluated in the context of the bound object.
 
 ### Standalone TemplateBinding Version
 
-{% highlight markup %}
+{% highlight html %}
 
 <template id="text" bind="{% raw %}{{ options }}{% endraw %}">
   <p>My favorite color is {% raw %}{{color}}{% endraw %}.</p>
@@ -175,7 +175,7 @@ Bindings inside the template are evaluated in the context of the bound object.
 
 ### Polymer Version
 
-{% highlight markup %}
+{% highlight html %}
 
 <polymer-element name="my-element">
   <template>
@@ -200,7 +200,7 @@ You will notice this pattern as we use more TemplateBinding features inside Poly
 
 You can also create a named scope. This comes useful if you have nested templates.
 
-{% highlight markup %}
+{% highlight html %}
 
 <polymer-element name="my-element">
   <template>

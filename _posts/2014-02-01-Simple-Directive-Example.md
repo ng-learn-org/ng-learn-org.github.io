@@ -18,7 +18,7 @@ This is another sample we ran into it some time ago...
 
 Imagine there\'re 4 pages which represent the flow of an online purchase. Each of these pages displays the following progress bar: (Customer starts on first page)
 
-{% highlight markup %}
+{% highlight html %}
 <div id="progressBar">
   <span class="active">Select Product</span>
   <span class="">Shipping Info</span>
@@ -83,7 +83,7 @@ We only care to react when the variable (page) changes.
 
 Our directive should look something like this:
 
-{% highlight markup %}
+{% highlight html %}
 <div data-my-progress-bar="{{"{{pageIndex"}}}}" data-currentPageStyle="active">
   <span>Select Product</span>
   <span>Shipping Info</span>
@@ -232,7 +232,7 @@ Having finished writting the test, it\'s now time to write the directive.
 
 So now each html has:
 
-{% highlight markup %}
+{% highlight html %}
   <div data-my-progress-bar="{{"{{pageIndex"}}}}" date-currentPageStyle="active">
     <span>Select Product</span>
     <span>Shipping Info</span>

@@ -177,7 +177,7 @@ If you would like to play/see with the unit test, launch this demo.
 And this is how out html looks like now:
 
 
-{% highlight markup %}
+{% highlight html %}
 
   <div data-my-birth-date data-my-validate-birth-date data-ng-model="search.dateOfBirth"></div>
 
@@ -185,7 +185,7 @@ And this is how out html looks like now:
 
 And here is the whole picture so far:
 
-{% highlight markup %}
+{% highlight html %}
 
 <body data-ng-app="myApp" data-ng-controller="searchCtrl">
 

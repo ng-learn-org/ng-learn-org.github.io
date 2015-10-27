@@ -107,7 +107,7 @@ git checkout -f step-0
 
 - Add AngularJs library to our index.html
 
-{% highlight markup %}
+{% highlight html %}
    
   <div>Welcome to the AngularJS World</div>
   <script src="bower_components/angular/angular.js"></script>
@@ -116,13 +116,13 @@ git checkout -f step-0
 
 - Bootstrap the AngularJS app using the automatic method
 
-{% highlight markup %}
+{% highlight html %}
 <body ng-app>
 {% endhighlight %}
 
 - Lets update our welcome message
 
-{% highlight markup %}
+{% highlight html %}
   <div>Welcome to the AngularJS World, {{ "{{userName"}}}}</div>
 {% endhighlight %}
 
@@ -144,7 +144,7 @@ git checkout -f step-1
 
 - Lets name our application
 
-{% highlight markup %}
+{% highlight html %}
 <body ng-app="myStoreApp">
 {% endhighlight %}
 
@@ -158,7 +158,7 @@ angular.module("myStoreApp", [])
 
 - Add app.js to our index.html so the browser will load it
 
-{% highlight markup %}
+{% highlight html %}
   <div>Welcome to the AngularJS World</div>
   <script src="bower_components/angular/angular.js"></script>
 

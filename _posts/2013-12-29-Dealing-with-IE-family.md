@@ -78,13 +78,13 @@ The performance increased right away and our results were successfully displayed
 
 2- Application declaration
 
-    {% highlight markup %}
+    {% highlight html %}
     <body id="ng-app" data-ng-app="siteApp">
     {% endhighlight %}
 
 3- Do not use custom tags. Use attributes instead always prefixed with \'data\' or \'x\'
 
-    {% highlight markup %}
+    {% highlight html %}
     <div ng-view>
     {% endhighlight %}
 
@@ -121,7 +121,7 @@ The performance increased right away and our results were successfully displayed
 Html Example:
 
 
-    {% highlight markup %}
+    {% highlight html %}
     <form role="form">
         <fieldset>
           <legend class="ada-hide">Show matrix in</legend>
@@ -148,7 +148,7 @@ In order to fix this and make all the browser to work on a consistent manner we 
 
 To use it just do something like this:
 
-    {% highlight markup %}
+    {% highlight html %}
        <ul>
          <li ng-repeat="item in items">
             <label bind-input="{{item.id}}">
@@ -160,7 +160,7 @@ To use it just do something like this:
 
 That will be compile and transform into something like:
 
-    {% highlight markup %}
+    {% highlight html %}
         <ul>
           <li>
              <label for="item0">A Label</label>

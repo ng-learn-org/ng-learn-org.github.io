@@ -57,7 +57,7 @@ Before doing anything new, lets bring everybody to the same page. Please run the
 
 - Now we are going to create a controller and provide our application some behaviour. Open index.html and lets add ng-controller to our div.
 
- {% highlight markup %}
+ {% highlight html %}
  <div ng-controller="welcomeController">Welcome to the AngularJS World, {{ "{{userName"}}}}</div>
  {% endhighlight %}
 
@@ -101,7 +101,7 @@ Before doing anything new, lets bring everybody to the same page. Please run the
 
 - Finally, lets make a few more changes on our index.html.
 
- {% highlight markup %}
+ {% highlight html %}
  <div ng-controller="welcomeController">
      Welcome to the AngularJS World, {{ "{{userName"}}}}
      <hr>
