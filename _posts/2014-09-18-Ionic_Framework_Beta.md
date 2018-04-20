@@ -32,7 +32,7 @@ Lets take a quick glance at some the new features:
 
 ## Breaking Changes
 
-* 
+*
 ion-radio no longer has an isolate scope.
 This will break your radio only if you were relying upon the radio having an isolate scope: if you were referencing `$parent.value` as
 the ng-disabled attribute, for example.
@@ -40,7 +40,9 @@ the ng-disabled attribute, for example.
 Change your code from this:
 
 ```
+{% raw %}
 <ion-radio ng-disabled="{{$parent.isDisabled}}"></ion-radio>
+{% endraw %}
 ```
 
 To this:
@@ -59,7 +61,9 @@ the ng-disabled attribute, for example.
 
 Change your code from this:
 
+{% raw %}
 <ion-toggle ng-disabled="{{$parent.isDisabled}}"></ion-toggle>
+{% endraw %}
 
 To this:
 
@@ -119,5 +123,3 @@ documentation](http://ionicframework.com/docs/api/directive/ionReorderButton/).
 
 
 Stay tuned!
-
-

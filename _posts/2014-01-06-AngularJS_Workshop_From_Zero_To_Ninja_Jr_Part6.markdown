@@ -339,4 +339,4 @@ If you get "Karma is not a task" or "Karma is not found". Please execute
 [3]: http://ng-learn.org/2013/12/AngularJS_Workshop_From_Zero_To_Ninja_Jr_Part3/
 [4]: http://ng-learn.org/2013/12/AngularJS_Workshop_From_Zero_To_Ninja_Jr_Part4/
 [5]: http://ng-learn.org/2014/01/AngularJS_Workshop_From_Zero_To_Ninja_Jr_Part5/
-[6]: http://ng-learn.org/tags/workshop.html
+[6]: http://ng-learn.org/tags/workshop

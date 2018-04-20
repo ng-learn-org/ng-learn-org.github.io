@@ -11,3 +11,4 @@ author: Santiago Esteva, Gonzalo Do Carmo Norte, Mariano Wahlmann
 copyright: 2014 © All Rights Reserved ng-learn.org
 image: http://ng-learn.org/img/logo.svg
 exclude: ["vendor"]
+plugins: [jekyll-paginate]

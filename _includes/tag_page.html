@@ -20,7 +20,7 @@
             <span class="tags">
                 Tags:
                 {% for category in post.categories %}
-                    <a href="/tags/{{ category }}.html">{{ category | replace:'_',' ' | capitalize }}</a>
+                    <a href="/tags/{{ category }}">{{ category | replace:'_',' ' | capitalize }}</a>
                     {% if forloop.last == false %},{% endif %}
                 {% endfor %},
             </span>

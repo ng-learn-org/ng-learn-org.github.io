@@ -4,11 +4,10 @@
         {% for category in site.categories %}
         {% assign tag = category[0] %}
         <li class="cat-item">
-            <a href="/tags/{{ tag }}.html" title="title">
+            <a href="/tags/{{ tag }}" title="title">
                 {{ tag | replace:'_',' ' | capitalize }} <span class="post-counter">({{ site.categories[tag].size }})</span>
             </a>
         </li>
         {% endfor %}
     </ul>
 </li>
-
