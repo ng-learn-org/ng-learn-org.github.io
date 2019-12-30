@@ -100,7 +100,7 @@ px      68    160    252    344    436    528    620    712    */
     margin-right: 20px;
   }
 
-    #share, #stayintouch, #tags {
+    #share, #stayintouch, #tags, #partners {
         display: none;
     }
 }
@@ -244,7 +244,7 @@ px      68    160    252    */
     display: none;
   }
 
-    #share, #stayintouch, #tags {
+    #share, #stayintouch, #tags, #partners {
         display: none;
     }
 }
@@ -330,7 +330,7 @@ px      68    160    252    344    436    */
     width: 436px;
   }
 
-  #share, #stayintouch, #tags {
+  #share, #stayintouch, #tags, #partners {
       display: none;
   }
 }
