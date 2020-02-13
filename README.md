@@ -5,6 +5,7 @@ Ng-Learn
 
     brew update && brew upgrade ruby-build
     brew install rbenv
+    Add eval "$(rbenv init -)" to the end of ~/.zshrc or ~/.bash_profile
     rbenv install 2.7.0
     rbenv rehash
     rbenv global 2.7.0
